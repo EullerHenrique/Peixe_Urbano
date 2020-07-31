@@ -1,0 +1,37 @@
+a{
+    color: #212529;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+p{
+    color:#999
+}
+
+.card{
+    border-radius: 20px;
+}
+
+.card-img-top{
+    height: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.preco {
+    color: #f60;
+    font-weight: bold;
+    font-size: 20px
+}
+
+
+
+.secao {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+  
