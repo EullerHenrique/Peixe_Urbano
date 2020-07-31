@@ -1,0 +1,45 @@
+
+Criar um novo projeto e determinar o prefixo do seletor do
+componente root (app)
+
+
+Padrão: app-root
+
+  ng new PeixeUrbano --prefix PeixeUrbano
+
+Obs: Quando o prefixo é determinado durante a criação
+     de um novo projeto angular, os módulos node não são instalados
+
+Instalar node-modules
+   npm install
+
+
+
+
+
+Serviços
+
+  Serviços nada mais são do que classes comuns com objetivos
+  bem definidos que visam atender a alguma necessidade 
+  especifica da aplicação.
+
+  Ex: 
+    - Log de acesso
+    - Calcular taxas / impostos
+    - API
+
+  Escopos de injeção de Serviços  
+    Escopo de módulo
+    Escopo de componente com herança
+    Escopo de componente sem herança
+
+
+  @injectable() -> Injeta um serviço em outro serviço
+
+  
+
+
+
+
+
+
