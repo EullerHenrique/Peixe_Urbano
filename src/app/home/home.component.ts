@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OfertasService } from 'ofertas.service';
+import { OfertasService } from './ofertas.service';
 
 @Component({
   selector: 'peixe-urbano-home',
