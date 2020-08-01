@@ -24,21 +24,48 @@ export class HomeComponent implements OnInit {
     this
     .ofertasService
     .getOfertas2()
-    .then( 
-      
-      //O método then() retorna uma Promise (para um callback). Possui dois argumentos, ambos são "call back functions", sendo uma para o sucesso e outra para o fracasso da promessa. 
 
+     /*
+     
+     O método then() retorna uma Promise (para um callback). Possui dois    argumentos, ambos são "call back functions", sendo uma para o sucesso e outra para o fracasso da promessa. 
+     
+     */
+
+    .then( 
+  
       (ofertas: Oferta[]) => { 
 
           this.ofertas = ofertas;
      
-      },
+      }
+
+      /*
+      
+      (param: any) =>{
+
+        console.log(param);
+
+      }
+
+      */
+      
+      )
+
+      /*
+
+      O método catch() retorna uma Promise e lida apenas com casos rejeitados. Ele possui o mesmo comportamento de quando chamamos Promise.prototype.then(undefined, onRejected) (de fato, chamando obj.catch(onRejected) internamente é chamado obj.then(undefined, onRejected)).
+      
+      */
+
+     .catch(
 
       (param: any) =>{
 
         console.log(param);
 
-      })
+      }
+
+     )
 
   }
 
