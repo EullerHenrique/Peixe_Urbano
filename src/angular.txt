@@ -1,23 +1,312 @@
+Angular?
 
-Criar um novo projeto e determinar o prefixo do seletor do
-componente root (app)
-
-
-Padrão: app-root
-
-  ng new PeixeUrbano --prefix PeixeUrbano
-
-Obs: Quando o prefixo é determinado durante a criação
-     de um novo projeto angular, os módulos node não são instalados
-
-Instalar node-modules
-   npm install
+Basicamente o AngularJS é um framework de código aberto usado para construir aplicativos para web baseados em uma única página
+    dinâmica
 
 
+Explicações mais detalhadas:
+
+    **** https://blog.algaworks.com/o-que-e-angular/ ****
+
+    https://blog.betrybe.com/framework-de-programacao/angular/
+
+    https://www.hostinger.com.br/tutoriais/o-que-e-angular/
+
+    https://www.treinaweb.com.br/blog/o-que-e-o-angular-e-para-que-serve/
+
+Angular CLI (ng)
+
+  O Angular CLI é uma ferramenta open source desenvolvida pelo próprio time do Angular e é utilizado para facilitar a criação de componentes, classes, services e outros.
+
+  Iniciar e gerenciar um projeto em Angular pode não ser uma tarefa tão simples. A existência de dezenas de bibliotecas, frameworks e ferramentas, que muitas vezes tentam resolver o mesmo problema, pode ser uma barreira aos primeiros contatos com a tecnologia.
+
+  Ao observar esse problema, a equipe do Angular criou uma ferramenta de linha de comando chamada Angular CLI (Command Line Interface - Interface de Linha de Comando) cujo objetivo principal é facilitar o gerenciamento de projetos escritos nesse framework.
 
 
 
-Serviços
+BootstrapStraping
+
+  BootstrapStraping é um termo usado para o processo de build de um framework:
+
+    "A técnica de se carregar um programa em um computador através de poucas instruções iniciais que permite a introdução
+    do resto do programa a partir de um dispositivo de entrada"
+
+    Basicamente é o que faz ser possivel você escrever um único comando e o projeto inteiro ser gerado diante dos seus olhos.
+
+
+
+    O bootstrap é uma indicação de qual modulo/component da aplicação deve passar pelo processo de Bootstraping, ou seja,
+    indica qual modulo/component deve ser injetado na aplicação.
+
+    Dessa maneira, quando o ng serve for executado o webpack saberá quais componentes e recursos adicionar no chunk
+    main.bundle.js
+
+    O bootstrap do main.ts indica que o primeiro modulo que deve passar pelo processo de Bootstraping é o app.module
+    O bootstrap do app.module indica que o primeiro componente que deve passar pelo processo de Bootsraping é o app.component.ts
+
+
+    Obs: Módulo (agrupamento de componentes)
+
+
+Webpack
+
+      Webpack é um module bundler (empacotador de módulos) para JavaScript, em outras palavras, ele junta os arquivos JS
+      (e também outros formatos) da sua aplicação (seja arquivos seus ou dependências externas) em um arquivo só
+      (ou mais de um), de forma otimizada. Os arquivos são unificados na ordem certa e sem duplicação.
+
+      Como o webpack sabe quais arquivos incluir e em qual ordem?
+      Ele monta um grafo de dependências.
+
+      Partindo de um arquivo inicial (entrada), ele verifica quais outros arquivos são importados por este, e os
+      adiciona ao grafo. Para cada um desses ele também verifica quais eles importam, assim sucessivamente até que
+      o grafo contenha todos os arquivos (módulos) necessários para a aplicação.
+
+
+
+    chunks (pedaços) / bundles (pacotes)
+
+        polyfills ->
+            Integra todos os polyfills da aplicação
+                Um polyfill é um pedaço de código (geralmente JavaScript na Web) usado para fornecer funcionalidades modernas
+                em navegadores mais antigos que não o suportam nativamente
+        main ->
+            Integra todos os módulos e componentes da aplicação
+        styles ->
+            Integra todos os arquivos de estilo da aplicação
+        vendor ->
+            Integra todas as bibliotecas angular da aplicação
+        inline ->
+            Integra os utilitários do webpack necessários para realizar o bootstraping da aplicação
+
+            Auxilia no carregamento dos demais scripts da aplicação.
+
+  Mock (simulaçao) 
+
+    Bom, quando falamos de teste de unidade, queremos testar as coisas isoladamente sem envolver outros componentes,
+    mas o que acontece se seu componente (no caso do angular por exemplo) precisa de outro componente pra funcionar?
+
+    Se você testar um componente que usa outro componente, esse não é mais um teste unitário por que envolve mais
+    de uma unidade. Esse é o teste de integração.
+
+    Nesse caso, como transformamos um teste de integração em um teste de unidade? Simulando o comportamento
+    do segundo componente. Essa simulação é justamente o Mock.
+
+    O Mock é um cara capaz de simular o comportamento de um componente, tornando possível você testar um
+    outro componente isoladamente.
+
+    No Angular, onde isso pode estar? Bom, digamos que seu componente lista e ordena um grupo de dados (usuários por exemplo).
+    Como você testa a ordenação e a listagem sem pedir isso direto pra API? Você usa um json local mesmo.
+    Isso já poderia ser chamado de Mock, você está simulando os dados da API.
+
+    Esse exemplo é muito básico, só pra te dar a ideia mais ou menos do que é.
+    Você pode "mockar" várias coisas: dados, comportamentos, etc..
+
+
+Componente
+
+  Os componentes são classes escritas em TypeScript que recebem o decorator @Component.
+
+  Quando analisamos a estrutura de um componente, podemos dividi-lo nas seguintes partes:
+
+  Metadata: são definições que iremos informar ao Angular que a nossa classe é um Component, por meio de decorators , nesse caso @Component (Essa função decora o componente AppComponent
+  com metadados, ou seja, com dados relativos ao próprio componente)
+
+  Classe: assim como em qualquer linguagem de programação que utiliza o paradigma da orientação a objeto, possui
+  suas propriedades e métodos
+
+
+  ****************************************************************************************************************
+
+    Decorator
+    Em algumas situações é necessário adicionar responsabilidades à objetos  específicos, e não a toda a classe.
+
+    Solução:
+      O padrão de projeto Decorator resolve o problema, permitindo que tais responsabilidades sejam adicionadas
+      individualmente, em tempo de execução.
+
+      Ao contrário da herança que aplica funcionalidades a todos os objetos da classe, o padrão decorator permite
+      aplicar funcionalidades apenas a um objeto específico.
+
+      O padrão Decorator permite estender as funcionalidades de um objeto em tempo de execução
+
+    ****************************************************************************************************************
+
+
+    Um Component é um tipo de classe existente em uma aplicação Angular, eles são identificados com o decorator @Component.
+    Neste decorator existem algumas propriedades mais utilizadas como: selector, templateUrl e style. Vamos especificá-las:
+
+    selector: é como identificamos o nosso componente.
+    Para todo o componente existe um elemento único associado que permite que ele seja adicionado em um documento HTML.
+    Nesse caso, o nome do elemento desse componente é cadastro e deve ser escrito como <cadastro></cadastro>
+
+    ex: 
+
+      Tag
+
+      <app-topo> </app-topo> 
+
+      ou 
+
+      Atributo
+
+      <div app-topo> </div> 
+
+      ou
+
+      Classe
+
+      <div class="app-topo"></div> 
+
+
+    TemplateUrl: é o nome do documento HTML que será a parte visual do componente. Nele podemos ter código em HTML
+    juntamente com todos os bindings e diretivas necessários para a exibição do componente no navegador
+
+    Template: também usado para descrever a parte visual do componente, porém nesse caso podemos fornecer código HTML "hard coded", como texto
+
+      ex:
+
+      template: `
+        <p>
+          Esse é o componente Topo
+        </p>
+  
+
+    styleUrl: é onde informamos quais folhas de estilo contêm o código CSS que será aplicado ao template do componente.
+
+    styles: também usado para descrever a parte do estilo do componente, porém nesse caso podemos fornecer código CSS "hard coded", como texto
+
+    ex: 
+    
+      styles:
+      [`
+        .exemplo {
+          color:red
+         }
+      `]
+
+  */
+
+    Com isso podemos concluir que a estrutura de um componente Angular deve ser formada por esses três elementos,
+    template (HTML), estilo (CSS) e classe (TypeScript).
+    Essas partes são organizadas em arquivos separados e unidas nos metadados do componente através do decorator @Component
+
+
+
+
+  Data Binding
+    Comunicação entre o template HTML e o seu Component
+
+      One-Way-Binding
+
+        Component -> Template HTML = Property binding (ligação de propriedade) => [property] = "data"
+                                     String interpolation (interpolação de string) => {{data}}
+        Template HTML -> Component = Event binding  (ligação de evento)=> (event) = "expression"
+
+      Two-way-Binding
+        Component <--> Template Html
+
+   Comunicação entre componentes (de pai para filho ou de filho para pai)
+
+      De pai para filho
+        @input -> Decorator que permite realizar a ligação de propriedade (property binding) do pai para o filho
+
+
+        ex: 
+         Se o atributo presente no property binding fosse xyz o decorator input iria decorar o atributo progresso com o valor do atributo xyz
+
+         @Input('xyz') public progresso: number = 25;
+
+
+         O decorator input decora o atributo progresso, tal decoração permite que esse atributo acesse o valor do atributo progresso presente no property binding localizado no componente pai
+
+         @Input() public progresso: number = 0;
+
+         O decorator input é executado após o construtor, portanto, o atributo tentativas não é acessível dentro do construtor
+
+         @Input() public tentativas: number;
+
+
+
+      De filho para pai
+        @output -> Decorator que permite realizar a ligação de evento (event binding) do filho para o pai
+        
+        Obs: Para um evento ser emitido em um componente filho, utiliza-se o objeto 
+        EventEmmiter
+
+        ex: 
+            O decorator output decora o atributo teste (possui como valor a instância de um emissor de eventos), tal decoração transforma esse atributo em um evento.
+
+            @Output() public teste: EventEmitter<string> = new EventEmitter();
+            
+            O evento teste é emitido para o componente pai com a string oi como valor
+
+            this.evento.emit('oi'); 
+
+            Assim que o evento teste for detectado (ou seja, assim que ele for emitido no componente filho), ele será enviado para a função encerrarJogo
+
+           Obs: No caso, o valor do evento é uma string
+        
+          <app-teste (teste)="teste($event)"></app-teste>
+          
+  
+
+
+  Diretivas
+      Diretivas são funcionalidades que manipulam o comportamento de elementos HTML no DOM
+
+      Componentes -> Diretivas com template
+      Estruturais -> ngFor, ngIf, nfSwtich, etc ... (Diretivas que criam estruturas html modificando o template)
+      Atributos -> Diretivas aplicadas a atributos de elementos HTML
+
+
+
+
+  Lifecycle Hooks (Ganchos do ciclo de vida)
+
+      Principais
+
+        ngOnChanges() -> Método chamado antes da inicialização de um componente
+                      -> Método chamado a cada atualização do @Input(), ou seja, a cada atualização de um input de dados
+                      -> Método chamado sempre que um atributo recebido de um componente pai
+                        ( por meio  do decorator @Input ) é atualizado
+
+        ngOnInit()    -> Método chamado na inicialização (inserção do template do componente em seu seletor) de um componente
+
+        ngOnDestroy() -> Método chamado durante a destruição (exclusão do template do componente de seu seletor) de um componente
+
+        ngDoCheck()
+        ngAfterContentInit()
+        ngAfterContentChecked()
+        ngAfterViewInit()
+        ngAfterViewChecked()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Services (serviços)
 
   Serviços nada mais são do que classes comuns com objetivos
   bem definidos que visam atender a alguma necessidade 
@@ -35,6 +324,26 @@ Serviços
 
 
   @injectable() -> Injeta um serviço em outro serviço
+
+
+
+  Promisses (promessas)
+
+    Uma promisse é um objeto usado para processamento assíncrono, esse objeto representa um valor que pode estar disponível agora, no futuro ou nunca.
+
+    Processamento síncrono e assícrono 
+     
+      Processamento síncrono: Aguarda a finalização do processo atual para o seguir para o próximo
+
+      [processo 1]
+                  [processo 2]
+                              [processo 3]
+
+      Processamento assícrono: Não aguarda a finaização do processamento atual para seguir para o próximo
+
+      [processo 1]
+        [processo 2]
+          [processo 3]                          
 
   
 
