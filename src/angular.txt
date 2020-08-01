@@ -304,22 +304,66 @@ Services (serviços)
 
   Promisses (promessas)
 
-    Uma promisse é um objeto usado para processamento assíncrono, esse objeto representa um valor que pode estar disponível agora, no futuro ou nunca.
+     Promise é um objeto usado para processamento assíncrono. Um Promise (de "promessa") representa um valor que pode estar disponível agora, no futuro ou nunca.
 
-    Processamento síncrono e assícrono 
-     
-      Processamento síncrono: Aguarda a finalização do processo atual para o seguir para o próximo
+          Processamento síncrono e assícrono 
+          
+            Processamento síncrono: Aguarda a finalização do processo atual para o seguir para o próximo
 
-      [processo 1]
-                  [processo 2]
-                              [processo 3]
+            [processo 1]
+                        [processo 2]
+                                    [processo 3]
 
-      Processamento assícrono: Não aguarda a finaização do processamento atual para seguir para o próximo
+            Processamento assícrono: Não aguarda a finaização do processamento atual para seguir para o próximo
 
-      [processo 1]
-        [processo 2]
-          [processo 3]                          
+            [processo 1]
+              [processo 2]
+                [processo 3]                          
 
+
+     Um Promise representa um proxy para um valor que não é necessariamente conhecido quando a promessa é criada. Isso permite a associação de métodos de tratamento para eventos da ação assíncrona num caso eventual de sucesso ou de falha. Isto permite que métodos assíncronos retornem valores como métodos síncronos: ao invés do valor final, o método assíncrono retorna uma promessa ao valor em algum momento no futuro.
+
+    Um Promise está em um destes estados: 
+
+        pending (pendente): Estado inicial, que não foi realizada nem rejeitada.
+        fulfilled (realizada): sucesso na operação.
+        rejected (rejeitado):  falha na operação.
+        settled (estabelecida): Que foi realizada ou rejeitada.
+        
+        Uma promessa pendente pode se tornar realizada com um valor ou rejeitada por um motivo (erro). Quando um desses estados ocorre, o método then do Promise é chamado, e ele chama o método de tratamento associado ao estado (rejected ou resolved).
+      
+      Resolve
+
+        O método Promise.resolve(value) retorna (para o método then) um objeto Promise que é resolvido com o valor passado.
+
+      Reject
+
+        O método Promise.reject(motivo) retorna (para o método theb) um objeto Promise que é //rejeitada com um dado motivo.
+
+      Then
+
+         O método then() retorna uma Promise (para um callback). Possui dois argumentos, ambos são "call back functions", sendo uma para o sucesso e outra para o fracasso da promessa. 
+
+
+      Explicação didática:
+    
+        Quando você envia requisições para outros sistemas, por exemplo se estiverem em outros computadores ou servidores, não tem como você calcular quanto tempo vai demorar para que você obtenha uma resposta com os dados que você deseja, certo?
+
+        O Promise permite que o seu sistema possa continuar processando qualquer outra coisa enquanto espera por essa resposta.
+
+        Por exemplo, imagine que ao abrir uma página, você manda um pedido pro servidor do Facebook e esse pedido vai demorar cerca de 40 segundos para ser completado e enviado de volta com a resposta.
+
+        Porém, o que quer que seja que você pediu, apenas ocupa um pequeno quadrado no canto da página, que não é CRUCIAL para o funcionamento da página.
+
+        Nesse caso temos 2 escolhas:
+
+            1) Esperar os 40 segundos e só então mostrar a página inteira, em função desse quadradinho (ruim)
+
+            2) Mostrar o resto da página e após 40 segundos adicionar o quadradinho apenas no local dele (bom)
+
+        A Promise nos permite fazer esse segundo caso que é muito melhor. Ninguem quer esperar 40 segundos para ver algo na tela, isso pode passar a ilusão que o seu sistema está sem funcionar (vai ficar carregando durante 40 segundos, esperando a resposta do servidor do facebook) fazendo com que as pessoas desistamde acessá-lo.
+
+        Basicamente o Promise nos provê um conjunto de functions e ferramentas para que possamos fazer a renderização desse quadradinho, porém ainda podemos renderizar todo o resto da página enquanto esperamos a informação chegar. Isso se chama assincronia de processos.   
   
 
 
