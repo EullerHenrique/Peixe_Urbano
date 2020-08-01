@@ -1,4 +1,4 @@
-Angular?
+Angular
 
 Basicamente o AngularJS é um framework de código aberto usado para construir aplicativos para web baseados em uma única página
     dinâmica
@@ -279,31 +279,6 @@ Componente
         ngAfterContentChecked()
         ngAfterViewInit()
         ngAfterViewChecked()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Services (serviços)
