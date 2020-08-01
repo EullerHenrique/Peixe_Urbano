@@ -32,6 +32,12 @@ export class HomeComponent implements OnInit {
 
           this.ofertas = ofertas;
      
+      },
+
+      (param: any) =>{
+
+        console.log(param);
+
       })
 
   }

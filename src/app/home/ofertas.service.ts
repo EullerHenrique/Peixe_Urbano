@@ -54,19 +54,26 @@ export class OfertasService{
 
   public getOfertas2(): Promise<Oferta[]>{
 
-    //Promise é um objeto usado para processamento assíncrono. Um Promise (de //"promessa") representa um valor que pode estar disponível agora, no //futuro ou nunca.
+    //Promise é um objeto usado para processamento assíncrono que retorna em seu construtor duas funções (resolve e reject) para um callback. Um Promise (de "promessa") representa um valor que pode estar disponível agora, no //futuro ou nunca.
 
       return new Promise( 
       
-      //O método Promise.resolve(value) retorna (para o método then) um objeto Promise que é resolvido com o valor passado.
+      //O método Promise.resolve(value) retorna (para o método then) um objeto Promise que foi resolvido com o valor passado.
 
-      //O método Promise.reject(motivo) retorna (para o método theb) um objeto Promise que é //rejeitada com um dado motivo.
+      //O método Promise.reject(motivo) retorna (para o método then) um objeto Promise que foi rejeitado com um dado motivo.
 
         (resolve, reject) =>{  
 
-               console.log(resolve);
+          let deu_certo = false;
 
-                resolve(this.ofertas);
+          if(deu_certo){
+              resolve(this.ofertas);
+          }else{ 
+              reject({
+                codigo_erro: 404,
+                mensagem_erro: "Servidor não encontrado"
+              })
+          }
 
         }
    
