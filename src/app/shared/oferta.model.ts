@@ -5,5 +5,5 @@ export class Oferta{
   public descricao: string;
   public valor: number;
   public destaque: boolean;
-  public imagens: object[];
+  public imagens: object;
 }

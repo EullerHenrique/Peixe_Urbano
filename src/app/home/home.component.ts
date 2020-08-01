@@ -21,11 +21,19 @@ export class HomeComponent implements OnInit {
     //this.ofertas =  this.ofertasService.getOfertas();
     //console.log(this.ofertas);
     
-    this.ofertasService.getOfertas2()
-    .then(
-      (ofertas: Oferta[]) => {
+    this
+    .ofertasService
+    .getOfertas2()
+    .then( 
+      
+      //O método then() retorna uma Promise (para um callback). Possui dois argumentos, ambos são "call back functions", sendo uma para o sucesso e outra para o fracasso da promessa. 
+
+      (ofertas: Oferta[]) => { 
+
           this.ofertas = ofertas;
+     
       })
+
   }
 
 }
