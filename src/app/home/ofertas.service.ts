@@ -7,7 +7,7 @@ export class OfertasService{
 		id: 1,
 		categoria: "restaurante",
 		titulo: "Burguer King",
-		oferta: "Whopper Furioso",
+	  descricao: "Whopper Furioso",
 		valor: 15.90,
 		destaque: true,
 		imagens: [
@@ -21,7 +21,7 @@ export class OfertasService{
 		id: 2,
 		categoria: "restaurante",
 		titulo: "Subway",
-		oferta: "Carne Supreme",
+		descricao: "Carne Supreme",
 		valor: 11.90,
 		destaque: true,
 		imagens: [
@@ -36,7 +36,7 @@ export class OfertasService{
 		id: 3,
 		categoria: "restaurante",
 		titulo: "Pizza Hut",
-		oferta: "Pizza De Calabresa",
+		descricao: "Pizza De Calabresa",
     valor: 39.90,
 		destaque: true,
 		imagens: [
