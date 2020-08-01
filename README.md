@@ -33,18 +33,6 @@
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 
 - [Layout](#layout)
-
-- [Pré-Requisitos](#pré-requisitos)
-
-- [Instalação e inserção do repositório em um projeto angular](#instalação-e-inserção-do-repositório-em-um-projeto-angular)
-
-- [Build e Deploy via Angular Cli](#build-e-deploy-via-angular-cli)
-
-- [Build via Angular Cli](#build-via-angular-cli)
-  
-  - [Deploy via servidor HTTP](#deploy-via-servidor-http)  
-  
-  - [Deploy via HTTP-server](#deploy-via-http-server)
    
 - [Licença](#licença)
   
