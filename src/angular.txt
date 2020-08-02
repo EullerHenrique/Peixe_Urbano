@@ -334,28 +334,28 @@ Services (serviços)
         
         Uma promessa pendente pode se tornar realizada com um valor ou rejeitada por um motivo (erro). Quando um desses estados ocorre, o método then do Promise é chamado, e ele chama o método de tratamento associado ao estado (rejected ou resolved).
       
-      Resolve
+    Resolve
 
         O método Promise.resolve(value) retorna (para o método then) um objeto Promise que é resolvido com o valor passado.
 
-      Reject
+    Reject
 
         O método Promise.reject(motivo) retorna (para o método theb) um objeto Promise que é //rejeitada com um dado motivo.
 
-      Then
+    Then
 
          O método then() retorna uma Promise (para um callback). Possui dois argumentos, ambos são "call back functions", sendo uma para o sucesso e outra para o fracasso da promessa. 
 
-      Cath
+    Cath
 
         O método catch() retorna uma Promise e lida apenas com casos rejeitados. Ele possui o mesmo comportamento de quando chamamos Promise.prototype.then(undefined, onRejected) (de fato, chamando obj.catch(onRejected) internamente é chamado obj.then(undefined, onRejected)).   
 
-      Encadeamento
+    Encadeamento
       
         Como os métodos Promise.prototype.then e Promise.prototype.catch  retornam promises, eles podem ser encadeados — uma operação chamada composição.  
 
 
-      Explicação didática:
+    Explicação didática:
     
         Quando você envia requisições para outros sistemas, por exemplo se estiverem em outros computadores ou servidores, não tem como você calcular quanto tempo vai demorar para que você obtenha uma resposta com os dados que você deseja, certo?
 
@@ -374,6 +374,25 @@ Services (serviços)
         A Promise nos permite fazer esse segundo caso que é muito melhor. Ninguem quer esperar 40 segundos para ver algo na tela, isso pode passar a ilusão que o seu sistema está sem funcionar (vai ficar carregando durante 40 segundos, esperando a resposta do servidor do facebook) fazendo com que as pessoas desistamde acessá-lo.
 
         Basicamente o Promise nos provê um conjunto de functions e ferramentas para que possamos fazer a renderização desse quadradinho, porém ainda podemos renderizar todo o resto da página enquanto esperamos a informação chegar. Isso se chama assincronia de processos.   
+
+
+
+
+
+
+        Para você entender melhor como funciona esse processo,
+        
+        
+        
+        entenda uma promise como uma promessa de entrega de determinado valor, 
+
+
+        
+        porém a resolução dessa promessa não ocorre de maneira síncrona (de forma linear), dentro dessa promise o resolve é o método responsável por de fato resolver a promessa e fazer a entrega de determinado conjunto de dados.
+
+        Então resumidamente, temos uma promessa e dentro dela uma função que irá de fato resolvê-la ou cumpri-la para melhor dizer.
+
+        Porém, como não sabemos quando a promise será resolvida, temos que fazer uma chamada ao método then de sua instância, que irá recuperar o conjunto de dados definidos na resolução (método resolve) quando isso ocorrer.
   
 
 
