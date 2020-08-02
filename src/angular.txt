@@ -350,6 +350,10 @@ Services (serviços)
 
         O método catch() retorna uma Promise e lida apenas com casos rejeitados. Ele possui o mesmo comportamento de quando chamamos Promise.prototype.then(undefined, onRejected) (de fato, chamando obj.catch(onRejected) internamente é chamado obj.then(undefined, onRejected)).   
 
+      Encadeamento
+      
+        Como os métodos Promise.prototype.then e Promise.prototype.catch  retornam promises, eles podem ser encadeados — uma operação chamada composição.  
+
 
       Explicação didática:
     

@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     
     this
     .ofertasService
-    .getOfertas2()
+    .getOfertas()
 
      /*
      
@@ -32,8 +32,11 @@ export class HomeComponent implements OnInit {
      */
 
     .then( 
-  
+
       (ofertas: Oferta[]) => { 
+        
+         console.log("A função resolve foi resolvida depos de 3 segundos");
+
 
           this.ofertas = ofertas;
      
@@ -54,7 +57,7 @@ export class HomeComponent implements OnInit {
       /*
 
       O método catch() retorna uma Promise e lida apenas com casos rejeitados. Ele possui o mesmo comportamento de quando chamamos Promise.prototype.then(undefined, onRejected) (de fato, chamando obj.catch(onRejected) internamente é chamado obj.then(undefined, onRejected)).
-      
+
       */
 
      .catch(

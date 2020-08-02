@@ -48,36 +48,48 @@ export class OfertasService{
 	}
 ]
 
-  public getOfertas(): Oferta[]{
-     return this.ofertas;
-  }
 
-  public getOfertas2(): Promise<Oferta[]>{
+  public getOfertas(): Promise<Oferta[]>{
 
-    //Promise é um objeto usado para processamento assíncrono que retorna em seu construtor duas funções (resolve e reject) para um callback. Um Promise (de "promessa") representa um valor que pode estar disponível agora, no //futuro ou nunca.
+    //Promise é um objeto usado para processamento assíncrono que retorna em //seu construtor duas funções (resolve e reject) para um callback. Um //Promise (de "promessa") representa um valor que pode estar disponível //agora, no futuro ou nunca.
 
       return new Promise( 
       
-      //O método Promise.resolve(value) retorna (para o método then) um objeto Promise que foi resolvido com o valor passado.
+      //O método Promise.resolve(value) retorna (para o método then) um objeto //Promise que foi resolvido com o valor passado.
 
-      //O método Promise.reject(motivo) retorna (para o método then) um objeto Promise que foi rejeitado com um dado motivo.
+      //O método Promise.reject(motivo) retorna (para o método then) um objeto //Promise que foi rejeitado com um dado motivo.
 
-        (resolve, reject) =>{  
+          (resolve, reject) =>{  
 
-          let deu_certo = false;
+            let deu_certo = true;
+            
+            if(deu_certo){
 
-          if(deu_certo){
-              resolve(this.ofertas);
-          }else{ 
-              reject({
-                codigo_erro: 404,
-                mensagem_erro: "Servidor não encontrado"
-              })
+                //Simulação da latência de uma requisição HTTP para uma API REST
+                setTimeout( () => { resolve(this.ofertas) }, 3000); 
+              
+            }else{ 
+                reject({
+                  codigo_erro: 404,
+                  mensagem_erro: "Servidor não encontrado"
+                })
+            }
           }
+        )
 
-        }
-   
-    );
+        // Como os métodos Promise.prototype.then e Promise.prototype.catch  //retornam promises, eles podem ser encadeados — uma operação chamada //composição.
+        .then(
+          (ofertas: Oferta[])=>{
+              console.log('Primeiro then');
+              return ofertas;
+          }
+        )
+        .then(
+          (ofertas: Oferta[]) =>{
+            console.log('Segundo then');
+            return ofertas;
+          }
+        )
   }
     
 }
