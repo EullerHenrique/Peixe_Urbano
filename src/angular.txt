@@ -459,7 +459,12 @@ Services (serviços)
             Basicamente, REST é um acrônimo para REpresentational State Transfer, ou seja, Transferência de Representação de
             Estado. O REST é, no final das contas, um estilo arquitetural que podemos utilizar ou não em nossas aplicações.
 
-            A ideia do REST é utilizar de maneira mais eficiente e em sua plenitude as características do protocolo HTTP,         principalmente no que diz respeito à semântica do protocolo. O resultado disso ao final das contas é, além da
+            A ideia do REST é utilizar de maneira mais eficiente e em sua plenitude as características do protocolo HTTP
+            
+
+            (HTTP (hyper text transport protcol) é um protocolo (protocol) que permite a obtenção de recursos, tais como documentos HTML. É a base de qualquer troca de dados na Web e um protocolo cliente-servidor, o que significa que as requisições são iniciadas pelo destinatário, geralmente um navegador da Web. Um documento completo é reconstruído a partir dos diferentes sub-documentos obtidos, como por exemplo texto, descrição do layout, imagens, vídeos, scripts e muito mais.)
+            
+            ,principalmente no que diz respeito à semântica do protocolo. O resultado disso ao final das contas é, além da
             utilização mais “correta” do protocolo, um trânsito de informações mais eficiente e, por consequência, mais rápido.
 
             Tipos de requisição ou Verbos HTTP
@@ -478,6 +483,7 @@ Services (serviços)
 
           Instalar
             npm install -g json-server
+
           Executar
             json-server --watch bd.json
 
