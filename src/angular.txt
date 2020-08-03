@@ -470,7 +470,16 @@ Services (serviços)
             4) DELETE: indica que um recurso será removido do servidor. (Delete)        
     
 
+        Json-server
 
+         Ao criar aplicações, algumas vezes não temos APIs REST prontas para uso no durante o desenvolvimento. 
+         
+         É aí que uma API REST falsa entra em ação. json-server provê a funcionalidade para configurar um servidor de API REST falso com mínimo de esforço.
+
+          Instalar
+            npm install -g json-server
+          Executar
+            json-server --watch bd.json
 
 
 
