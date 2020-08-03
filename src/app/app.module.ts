@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { TopComponent } from './top/top.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
-import { HttpModule} from '@angular/http';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [ 

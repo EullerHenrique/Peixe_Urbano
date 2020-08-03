@@ -12,14 +12,9 @@ export class HomeComponent implements OnInit {
 
   public ofertas: Oferta[];
 
-  constructor(private ofertasService: OfertasService) { 
-
-  }
+  constructor(private ofertasService: OfertasService) {}
 
   ngOnInit() {
-    
-    //this.ofertas =  this.ofertasService.getOfertas();
-    //console.log(this.ofertas);
     
     this
     .ofertasService
@@ -35,9 +30,6 @@ export class HomeComponent implements OnInit {
 
       (ofertas: Oferta[]) => { 
         
-         console.log("A função resolve foi resolvida depos de 3 segundos");
-
-
           this.ofertas = ofertas;
      
       }
