@@ -191,6 +191,15 @@ Componente
     Essas partes são organizadas em arquivos separados e unidas nos metadados do componente através do decorator @Component
 
 
+    Outras propriedades:
+      providers (provedores)
+
+      Utilidade:
+        A injeção de um serviço faz com que a instância da classe de um serviço se torne algo gerenciado pelo próprio framework, possibilitando inclusive que outros serviços sejam injetados dentro do mesmo, como por exemplo o serviço http do angular. 
+
+        Além disso a injeção de serviços promove uma instância singleton do objeto que pode ser utilizado em diversas camadas da aplicação, como por exemplo no componente ou mesmo no módulo em um contexto mais alto  em que todos os componentes poderão utilizar a mesma instância do serviço, isso mesmo, a mesma instância, ou seja, é como se o objeto flutuasse pela aplicação toda, sendo injetado onde necessário e sobretudo, mantendo suas modificações.  
+ 
+
 
 
   Data Binding
