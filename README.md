@@ -41,8 +41,7 @@
 
 ## Página Online
 
-peixe-urbano.stackblitz.io/
-    
+> https://peixe-urbano.stackblitz.io/    
 
 ## Projeto Base
 
