@@ -24,7 +24,7 @@ import { DiversaoComponent } from './diversao/diversao.component';
        [ 
          BrowserModule, 
          HttpModule,
-         RouterModule 
+         RouterModule.forRoot(ROUTES) //forRoot -> As rotas são disponibilizadas globalmente 
       ],
 
   bootstrap:[ 
