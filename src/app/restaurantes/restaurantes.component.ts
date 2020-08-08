@@ -20,7 +20,9 @@ export class RestaurantesComponent implements OnInit {
     .then( 
       
       (ofertas: Oferta[]) => {
+
         this.ofertas = ofertas;        
+   
     })
 
   }
