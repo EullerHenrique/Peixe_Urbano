@@ -16,7 +16,7 @@ export class OfertasService{
     .toPromise()
     .then(
       
-      (ofertas: any) => {
+      (ofertas: Oferta[]) => {
 
         return ofertas.json();
      
@@ -30,7 +30,7 @@ export class OfertasService{
       .toPromise()
       .then(
       
-      (ofertas: any) => {
+      (ofertas: Oferta[]) => {
 
         return ofertas.json();
      
