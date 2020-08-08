@@ -386,9 +386,6 @@ Services (serviços)
 
 
 
-
-
-
         Para você entender melhor como funciona esse processo,
         
         
@@ -402,6 +399,66 @@ Services (serviços)
         Então resumidamente, temos uma promessa e dentro dela uma função que irá de fato resolvê-la ou cumpri-la para melhor dizer.
 
         Porém, como não sabemos quando a promise será resolvida, temos que fazer uma chamada ao método then de sua instância, que irá recuperar o conjunto de dados definidos na resolução (método resolve) quando isso ocorrer.
+
+
+
+        Ex:
+
+    /*public getOfertas(): Promise<Oferta[]>{
+
+    //Promise é um objeto usado para processamento assíncrono que retorna em //seu construtor duas funções (resolve e reject) para um callback. Um //Promise (de "promessa") representa um valor que pode estar disponível //agora, no futuro ou nunca.
+
+      return new Promise( 
+      
+      //O método Promise.resolve(value) retorna (para o método then) um objeto //Promise que foi resolvido com o valor passado.
+
+      //O método Promise.reject(motivo) retorna (para o método then) um objeto //Promise que foi rejeitado com um dado motivo.
+
+          (resolve, reject) =>{  
+
+            let deu_certo = true;
+            
+            if(deu_certo){
+
+                //Simulação da latência de uma requisição HTTP para uma API REST
+                setTimeout( () => { resolve(this.ofertas) }, 3000); 
+              
+            }else{ 
+                reject({
+                  codigo_erro: 404,
+                  mensagem_erro: "Servidor não encontrado"
+                })
+            }
+          }
+        )
+
+        // Como os métodos Promise.prototype.then e Promise.prototype.catch  //retornam promises, eles podem ser encadeados — uma operação chamada //composição.
+        .then(
+          (ofertas: Oferta[])=>{
+              console.log('Primeiro then');
+              return ofertas;
+          }
+        )
+        .then(
+          (ofertas: Oferta[])=>{
+            console.log('Segundo then');
+            return new Promise(
+              (res, rej)=> {
+                  setTimeout(() => {res(ofertas)},3000)
+              }
+            );
+          }
+        )
+        .then(
+          (ofertas: Oferta[])=>{
+
+            console.log('terceiro then executado após 3 segundos porque estava aguardando uma promise ser resolvida');
+           return ofertas; 
+          }
+        )
+     
+  }
+  */
   
 
 
@@ -495,6 +552,11 @@ Services (serviços)
 
           Executar
             json-server --watch bd.json
+
+       
+
+
+            
 
 
 
