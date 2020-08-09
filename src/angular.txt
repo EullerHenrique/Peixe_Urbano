@@ -551,7 +551,7 @@ Services (serviços)
             npm install -g json-server
 
           Executar
-            json-server --watch bd.json
+            json-server --watch ofertas.database.json
 
        
 
