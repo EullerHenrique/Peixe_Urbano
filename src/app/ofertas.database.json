@@ -63,9 +63,9 @@
 			"id": 5,
 			"categoria": "diversao",
 			"titulo": "Hot Park",
-			"descricao_oferta": "Ingresso Adulto",
+			"descricao": "Ingresso Adulto",
 			"valor": 115.90,
-			"destaque": false,
+			"destaque": true,
 			"imagens": [
 				{"url": "https://user-images.githubusercontent.com/48317736/89740442-12c6fb00-da5f-11ea-9f91-83b01388588b.jpg"},
 				{"url": "https://user-images.githubusercontent.com/48317736/89740444-1490be80-da5f-11ea-8c54-0555d331ad41.jpg"}
@@ -74,14 +74,13 @@
 		{
 			"id": 6,
 			"categoria": "diversao",
-			"titulo": "Academia de tiro",
-			"descricao_oferta": "Sessão de tiro dinâmico com Instrutor, Estande, Alvo e Equipamentos.",
-			"anunciante": "Academia de Tiro",
-			"valor": 89.90,
-			"destaque": false,
+			"titulo": "Beto Carrero World",
+			"descricao": "Passaporte de Acesso - 1 Dia - A partir de 05 anos",
+			"valor": 99.90,
+			"destaque": true,
 			"imagens": [
-				{"url": "/assets/ofertas/6/img1.jpg"},
-				{"url": "/assets/ofertas/6/img2.jpg"}
+				{"url": "(https://user-images.githubusercontent.com/48317736/89740589-7998e400-da60-11ea-821d-a90659b6ff98.jpg"},
+				{"url": "https://user-images.githubusercontent.com/48317736/89740591-7aca1100-da60-11ea-910e-d7b88bbb2f2e.jpg"}
 			]
 		}	
  ]
