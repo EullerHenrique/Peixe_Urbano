@@ -35,7 +35,7 @@ p{
 
 .secao::after {
   content: "";
-  display: table;
+  display: block;
   border-bottom: 2px solid #f60; 
   width: 220px;
   margin: auto ;
