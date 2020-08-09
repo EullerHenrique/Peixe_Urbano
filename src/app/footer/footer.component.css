@@ -3,5 +3,8 @@
   background: #0057A6;
   font-size: 11px;
   color: #6CC0FF;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
