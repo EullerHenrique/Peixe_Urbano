@@ -47,7 +47,7 @@
 			"id": 4,
 			"categoria": "diversao",
 			"titulo": "Thermas Dos Laranjais",
-			"descricao": "Ingresso Promocional - Inteira",
+			"descricao": "Ingresso",
 			"valor": 80.90,
 			"destaque": true,
 			"imagens": [
@@ -63,7 +63,7 @@
 			"id": 5,
 			"categoria": "diversao",
 			"titulo": "Hot Park",
-			"descricao": "Ingresso Adulto",
+			"descricao": "Bilhete",
 			"valor": 115.90,
 			"destaque": true,
 			"imagens": [
@@ -75,11 +75,11 @@
 			"id": 6,
 			"categoria": "diversao",
 			"titulo": "Beto Carrero World",
-			"descricao": "Passaporte de Acesso - 1 Dia - A partir de 05 anos",
+			"descricao": "Passaporte",
 			"valor": 99.90,
 			"destaque": true,
 			"imagens": [
-				{"url": "(https://user-images.githubusercontent.com/48317736/89740589-7998e400-da60-11ea-821d-a90659b6ff98.jpg"},
+				{"url": "https://user-images.githubusercontent.com/48317736/89740589-7998e400-da60-11ea-821d-a90659b6ff98.jpg"},
 				{"url": "https://user-images.githubusercontent.com/48317736/89740591-7aca1100-da60-11ea-910e-d7b88bbb2f2e.jpg"}
 			]
 		}	
