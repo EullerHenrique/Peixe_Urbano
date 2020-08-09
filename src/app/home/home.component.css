@@ -33,5 +33,14 @@ p{
     margin-bottom: 30px;
 }
 
+.secao::after {
+  content: "";
+  display: table;
+  border-bottom: 2px solid #f60; 
+  width: 220px;
+  margin: auto ;
+}
+
+
 
   
