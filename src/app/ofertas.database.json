@@ -46,31 +46,29 @@
   {
 			"id": 4,
 			"categoria": "diversao",
-			"titulo": "Estância das águas",
-			"descricao_oferta": "Diversão garantida com piscinas, trilhas e muito mais.",
-			"anunciante": "Estância das águas",
-			"valor": 31.90,
+			"titulo": "Thermas Dos Laranjais",
+			"descricao": "Ingresso Promocional - Inteira",
+			"valor": 80.90,
 			"destaque": true,
 			"imagens": [
-				{"url": "/assets/ofertas/4/img1.jpg"},
-				{"url": "/assets/ofertas/4/img2.jpg"},
-				{"url": "/assets/ofertas/4/img3.jpg"},
-				{"url": "/assets/ofertas/4/img4.jpg"},
-				{"url": "/assets/ofertas/4/img5.jpg"},
-				{"url": "/assets/ofertas/4/img6.jpg"}
+				{"url": "https://user-images.githubusercontent.com/48317736/89740341-20c84c00-da5e-11ea-95d4-60c489e0b57f.png"},
+				{"url": "https://user-images.githubusercontent.com/48317736/89740339-1efe8880-da5e-11ea-8593-be6bca7c9a62.jpeg"},
+				{"url": "https://user-images.githubusercontent.com/48317736/89740333-17d77a80-da5e-11ea-9d9d-fcbb2eafea62.png"},
+				{"url": "https://user-images.githubusercontent.com/48317736/89740331-16a64d80-da5e-11ea-8830-9e7e08a51875.jpeg"},
+				{"url": "https://user-images.githubusercontent.com/48317736/89740330-15752080-da5e-11ea-83e1-29963db4b7fc.jpeg"},
+				{"url": "https://user-images.githubusercontent.com/48317736/89740323-1017d600-da5e-11ea-8fa2-b49e9bef1a4a.jpeg"}
 			]
 		},
 		{
 			"id": 5,
 			"categoria": "diversao",
-			"titulo": "Kart",
-			"descricao_oferta": "Bateria de Kart de 30 minutos.",
-			"anunciante": "Speed Kart",
-			"valor": 54.90,
+			"titulo": "Hot Park",
+			"descricao_oferta": "Ingresso Adulto",
+			"valor": 115.90,
 			"destaque": false,
 			"imagens": [
-				{"url": "/assets/ofertas/5/img1.jpg"},
-				{"url": "/assets/ofertas/5/img2.jpg"}
+				{"url": "https://user-images.githubusercontent.com/48317736/89740442-12c6fb00-da5f-11ea-9f91-83b01388588b.jpg"},
+				{"url": "https://user-images.githubusercontent.com/48317736/89740444-1490be80-da5f-11ea-8c54-0555d331ad41.jpg"}
 			]
 		},
 		{
