@@ -7,23 +7,21 @@
 
 	<hr>
 
-	<div class="row d-flex justify-content-center">
+  <div class="row d-flex justify-content-center">
 
-		<div class="col-8 col-md-4" *ngFor="let oferta of ofertas">
-			<a href="#">
-				<div class="card mt-3 mb-3">
-					<img class="card-img-top" [src]="oferta.imagens[0].url">
-					<div class="card-body">
-						<p class="card-text">{{oferta.titulo}}</p>
-						<h4 class="card-title text-center">{{oferta.descricao}}</h4>
-						<p class="preco d-flex justify-content-end">R$ {{oferta.valor}}0</p>
-					</div>
-				</div>
-			</a>
-		</div>
+    <div class="col-8 col-md-4" *ngFor="let oferta of ofertas">
+      <a href="#">
+        <div class="card mt-3 mb-3">
+          <img class="card-img-top" [src]="oferta.imagens[0].url">
+          <div class="card-body">
+            <p class="card-text">{{oferta.titulo}}</p>
+            <h4 class="card-title text-center">{{oferta.descricao}}</h4>
+            <p class="preco d-flex justify-content-end">R$ {{oferta.valor}}0</p>
+          </div>
+        </div>
+      </a>
+    </div>
 
-	</div>
+  </div>
 
 	<hr>
-
-</div>
