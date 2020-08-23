@@ -1,6 +1,7 @@
 import { Http } from "@angular/http";
 import { Injectable } from "@angular/core";
 import { Oferta } from "./shared/oferta.model";
+import { URL_API } from "./app.api";
 
 import 'rxjs/add/operator/toPromise';
 import { HttpBackend } from "@angular/common/http";
@@ -13,7 +14,7 @@ export class OfertasService{
 
   public getOfertas(): Promise<Oferta[]>{
     return this
-    .http.get('http://localhost:3000/ofertas?destaque=true')
+    .http.get(`${URL_API}?destaque=true`)
     .toPromise()
     .then(
       
@@ -27,7 +28,8 @@ export class OfertasService{
   }
 
   public getOfertasPorCategoria(categoria: string): Promise<Oferta[]>{
-      return this.http.get(`http://localhost:3000/ofertas?categoria=${categoria}`)
+      return this
+      .http.get(`${URL_API}?categoria=${categoria}`)
       .toPromise()
       .then(
       
@@ -40,12 +42,13 @@ export class OfertasService{
   }
 
   public getOfertaPorId(id: number): Promise<Oferta>{
-      return this.http.get(`http://localhost:3000/ofertas?id=${id}`)
+      return this
+      .http.get(`${URL_API}?id=${id}`)
       .toPromise()
       .then(
       
       (oferta: any) => {
-        
+
         return oferta.json().shift(); //shift() = extrai o conteúdo presente na primeira posição do array
      
       }
