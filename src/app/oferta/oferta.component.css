@@ -1,14 +1,15 @@
-h1 {
-    color: #555
+p, h4{
+  margin-bottom: 0;
 }
 
 .oferta {
     margin-top: 25px
 }
 
-.oferta img {
-    width: 372px;
+img {
+    width: 391px;
     height: 240px;
+    border-radius: 15px
 }
 
 .thumbnails {
@@ -18,6 +19,5 @@ h1 {
 .thumbnails img {
     width: 124px;
     height: 80px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin-right: 5px;
 }
