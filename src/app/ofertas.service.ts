@@ -39,5 +39,16 @@ export class OfertasService{
     );
   }
 
-    
+  public getOfertaPorId(id: number): Promise<Oferta>{
+      return this.http.get(`http://localhost:3000/ofertas?id=${id}`)
+      .toPromise()
+      .then(
+      
+      (oferta: any) => {
+        
+        return oferta.json().shift(); //shift() = extrai o conteúdo presente na primeira posição do array
+     
+      }
+    );
+  }
 }
