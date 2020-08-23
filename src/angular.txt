@@ -554,6 +554,16 @@ Services (serviços)
             json-server --watch ofertas.database.json
 
        
+       Recuperando parâmetros da rota
+
+        Snapshot = tira uma "foto" da rota, isso permite que os parâmetros possam ser acessados.
+
+        Subscribe =  fica "escutando" alterações na rota. Quando uma alteração é "escutada" podemos reagir a mudança (reactive programming).
+
+       
+
+
+       
 
 
             
