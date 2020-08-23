@@ -10,6 +10,7 @@ import { OfertasService} from "../ofertas.service";
   providers: [OfertasService]
 
 })
+
 export class DiversaoComponent implements OnInit {
 
   public ofertas: Oferta[];
