@@ -1,30 +1,37 @@
 <div class="container">
-  <div class="oferta">
+  
+  <!-- 
+    
+    Essa condiçaõ é necessária para que não ocorra um erro quando o angular renderizar o componente ofertas. Esse erro ocorre porque quando a primeira renderização é feita, a promessa ainda não foi resolvida, logo, uma mensagem de erro é emitida antes da promessa retornar a oferta 
+    
+  -->
+
+  <div class="oferta" *ngIf="oferta !== undefined">
 
     <div class="row">
       
       <div class="col d-flex justify-content-center text-center">
-        <h4>Super Burger - Rodízio de Mini-hambúrger com opção de entrada.</h4>
+        <div>
+          <h4>{{oferta.descricao}}</h4>
+          <h5>{{oferta.titulo}}</h5>
+        </div>
       </div>
 
     </div>
 
     <div class="row mt-5 mb-5">
 
-      <div class="col-md-6 d-flex justify-content-center">
+      <div class="col-md-6 d-flex justify-content-center text-center">
 
         <div>
         
-          <img src="/assets/ofertas/1/img1.jpg"/>
+          <img [src]="oferta.imagens[0].url">
         
           <div class="thumbnails">
-            <img src="/assets/ofertas/1/img2.jpg" />
-            <img src="/assets/ofertas/1/img3.jpg" />
-            <img src="/assets/ofertas/1/img4.jpg" />
+            <img *ngFor = "let imagem of oferta.imagens" [src]="imagem.url" class="mb-2">
+        
           </div>
           
-          
-
         </div>
 
       </div>
@@ -33,7 +40,7 @@
 
         <div>
             <p>Por apenas</p>
-            <h1>R$ 29,90</h1>
+            <h1>R$ {{oferta.valor}}0 </h1>
             <button type="button" class="btn btn-primary btn-lg shadow-none rounded-pill">Adicionar ao carrinho</button>
         </div>
 
