@@ -569,6 +569,18 @@ Services (serviços)
 
         Subscribe =  fica "escutando" alterações na rota. Quando uma alteração é "escutada" podemos reagir a mudança (reactive programming).
 
+
+      Programação reativa
+
+        https://www.reactivemanifesto.org/pt-BR
+      
+      Observables
+
+        
+
+
+
+
        
 
 
