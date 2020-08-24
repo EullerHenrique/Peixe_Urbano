@@ -10,7 +10,7 @@ import { OfertasService } from '../../ofertas.service';
 })
 export class ComoUsarComponent implements OnInit {
 
-  public como_usar: string = '';
+  public como_usar: string = `.`;
 
   constructor(private route: ActivatedRoute, private ofertasService: 
   OfertasService) {  }

@@ -12,7 +12,7 @@ import { OfertasService } from '../../ofertas.service';
 })
 export class OndeFicaComponent implements OnInit {
 
-  public onde_fica: string = '';
+  public onde_fica: string = '.';
 
   constructor(private route: ActivatedRoute, private ofertasService: 
   OfertasService) {  }
