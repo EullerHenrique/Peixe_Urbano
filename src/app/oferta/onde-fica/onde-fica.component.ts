@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: "app-onde-fica",
@@ -6,7 +8,12 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./onde-fica.component.css"]
 })
 export class OndeFicaComponent implements OnInit {
-  constructor() {}
 
-  ngOnInit() {}
+  constructor(private route: ActivatedRoute) {  }
+
+  ngOnInit() {
+
+    console.log(this.route.parent.snapshot.params['id']);
+
+  }
 }
