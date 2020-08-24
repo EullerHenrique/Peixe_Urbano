@@ -553,8 +553,17 @@ Services (serviços)
           Executar
             json-server --watch ofertas.database.json
 
-       
-       Recuperando parâmetros da rota
+
+
+      Rotas
+
+        path ->  Define o caminho do URL para a rota.
+        component -> Define o componente que o Angular deve usar para a rota correspondente.
+        router-outlet (saída do roteador) -> Atua como um espaço reservado que o Angular preenche dinamicamente com base na saída atual do roteador.
+        routerLink -> Diretiva para vincular um elemento HTML clicável a uma rota.
+
+      
+      Recuperando parâmetros da rota
 
         Snapshot = tira uma "foto" da rota, isso permite que os parâmetros possam ser acessados.
 
