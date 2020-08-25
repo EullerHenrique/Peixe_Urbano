@@ -8,6 +8,7 @@ import { HttpBackend } from "@angular/common/http";
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/retry';
 
 
 @Injectable()
@@ -78,10 +79,12 @@ export class OfertasService{
   }
 
   public pesquisaOfertas(termoDaPesquisa: string): Observable<Oferta[]>{
-      return this.http.get(`${URL_API_OFERTAS}?descricao=${termoDaPesquisa}`)
+      return this.http.get(`${URL_API_OFERTAS}?descricao_like=${termoDaPesquisa}`)
+      .retry(10)
       .map( (ofertas: any) => {
         return ofertas.json();
       })
+  
   }
 
 

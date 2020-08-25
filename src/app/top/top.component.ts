@@ -11,7 +11,7 @@ import { Oferta } from '../shared/oferta.model';
 })
 export class TopComponent implements OnInit {
 
-  private ofertas: Observable<Oferta[]>;
+  private myObservable: Observable<Oferta[]>;
 
   constructor(private OfertasService: OfertasService) { }
 
@@ -19,11 +19,26 @@ export class TopComponent implements OnInit {
   }
 
   public pesquisa(termoDaPesquisa: string): void{
-    this.ofertas = this.OfertasService.pesquisaOfertas(termoDaPesquisa);
-   
-    this.ofertas.subscribe( 
-      (ofertas: Oferta[]) => console.log(ofertas)
-    )
+
+    //Observable (Observavél)
+    this.myObservable = this.OfertasService.pesquisaOfertas(termoDaPesquisa);
+
+    //Observer (Observador)
+    let myObserver = {
+
+      next: (ofertas: Oferta[]) => { 
+        console.log(ofertas)
+      },
+      error: (erro: any) => {
+        console.log('Erro status: ', erro.status);
+      }
+    }
+
+    //Inscreve um observador (myObserver) em um observavél(myObservable)
+    //Obs: Toda vez que um o observador adquirir um novo valor, o observador //será notificado (o observador receberá o novo valor)
+
+    this.myObservable.subscribe(myObserver)
+
   }
 
 }
