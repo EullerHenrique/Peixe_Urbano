@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { OfertasService } from '../ofertas.service';
 
 @Component({
   selector: 'peixe-urbano-top',
   templateUrl: './top.component.html',
-  styleUrls: ['./top.component.css']
+  styleUrls: ['./top.component.css'],
+  providers: [ OfertasService ]
 })
 export class TopComponent implements OnInit {
 
-  constructor() { }
+  constructor(private OfertasService: OfertasService) { }
 
   ngOnInit() {
   }
