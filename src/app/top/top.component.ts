@@ -29,8 +29,13 @@ export class TopComponent implements OnInit {
       next: (ofertas: Oferta[]) => { 
         console.log(ofertas)
       },
+      
       error: (erro: any) => {
         console.log('Erro status: ', erro.status);
+      }, 
+
+      complete: () => {
+        console.log('Valor recebido com sucesso!')
       }
     }
 
