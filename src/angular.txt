@@ -307,7 +307,7 @@ Services (serviços)
     Escopo de componente sem herança
 
 
-  @injectable() -> Injeta um serviço em outro serviço
+  @injectable() -> Faz com que um serviço se torne injetável
 
 
 

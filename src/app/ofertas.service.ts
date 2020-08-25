@@ -6,6 +6,10 @@ import { URL_API_OFERTAS, URL_API_COMO_USAR, URL_API_ONDE_FICA } from "./app.api
 import 'rxjs/add/operator/toPromise';
 import { HttpBackend } from "@angular/common/http";
 
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+
+
 @Injectable()
 export class OfertasService{
 
@@ -55,7 +59,6 @@ export class OfertasService{
     );
   }
 
-
   public getComoUsarOfertaPorId(id: number): Promise<string>{
       return this
       .http.get(`${URL_API_COMO_USAR}?id=${id}`)
@@ -65,7 +68,7 @@ export class OfertasService{
       })
   }
 
-    public getOndeFicaOfertaPorId(id: number): Promise<string>{
+  public getOndeFicaOfertaPorId(id: number): Promise<string>{
       return this
       .http.get(`${URL_API_ONDE_FICA}?id=${id}`)
       .toPromise()
@@ -73,4 +76,14 @@ export class OfertasService{
         return como_usar.json()[0].descricao;
       })
   }
+
+  public pesquisaOfertas(termoDaPesquisa: string): Observable<Oferta[]>{
+      return this.http.get(`${URL_API_OFERTAS}?descricao=${termoDaPesquisa}`)
+      .map( (ofertas: any) => {
+        return ofertas.json();
+      })
+  }
+
+
+
 }
