@@ -34,3 +34,18 @@ img {
   width: 220px;
   margin: auto ;
 }
+
+.btn-outline-primary{
+      border-color: #006acb;
+      color: #006acb;
+
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:visited,
+.btn-outline-primary:focus {
+    background-color: #006acb;
+    border-color:#006acb;
+    color: white;
+}
+
