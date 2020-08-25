@@ -12,4 +12,8 @@ export class TopComponent implements OnInit {
   ngOnInit() {
   }
 
+  public pesquisa(termoDaPesquisa: string): void{
+    console.log(termoDaPesquisa);
+  }
+
 }
