@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Oferta } from '../shared/oferta.model';
 import { OfertasService } from '../ofertas.service';
 import { Observable } from 'rxjs/Observable';
+import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/Rx';
 
 @Component({
@@ -12,7 +13,7 @@ import 'rxjs/Rx';
   providers: [OfertasService]
 })
 
-export class OfertaComponent implements OnInit {
+export class OfertaComponent implements OnInit, OnDestroy {
 
   private oferta: Oferta;
 
@@ -23,6 +24,10 @@ export class OfertaComponent implements OnInit {
     .then( (oferta: Oferta) =>{
         this.oferta = oferta;
     });
+  }
+
+  ngOnDestroy(){
+    
   }
 
 }
