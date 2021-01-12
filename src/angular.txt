@@ -661,6 +661,11 @@ Services (serviços)
 
           Executa a ação do switch map após 1 segundo
 
+        
+        Of
+
+          Força a inferência de um tipo
+
 
 
 

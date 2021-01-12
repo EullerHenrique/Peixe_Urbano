@@ -3,6 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/observable/of';
 import { OfertasService } from '../ofertas.service';
 import { Oferta } from '../shared/oferta.model';
 
@@ -26,11 +27,18 @@ export class TopComponent implements OnInit {
                        .debounceTime(1000)
                        .switchMap((termoDaPesquisa: string) => {
                           console.log('requisicao http para api');
+
+                          if(termoDaPesquisa.trim() === ''){
+                            return Observable.of<Oferta[]>([])
+                          }
+                          
                           return this.OfertasService.pesquisaOfertas(termoDaPesquisa);
                        });
 
+
+
     // Observeble (Observável)
-    // Subjcect atuando na condiçãode observável
+    // Subjcect atuando na condição de observável
 
     //Obs: Toda vez que o observavel adquirir um novo valor, uma função de callback receberá o novo valor
 
