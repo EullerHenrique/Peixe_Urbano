@@ -581,6 +581,8 @@ Services (serviços)
 
         retry(n: number) -> Faz n requisições ao servidor até o código de requisição feita com sucesso ser recebido
                  
+
+                 
         subscribe ->  fica "escutando" alterações na rota. Quando uma alteração é "escutada" podemos reagir a mudança (reactive programming).
         
         next -> Recebe o valor emitido pelo observavél
@@ -591,7 +593,23 @@ Services (serviços)
 
 
 
-       
+       Formação do observable de retorno do método get da lib http do Angular 4
+
+        1) O método http get() retorna um Observable
+        2) Esse Observable por sua vez emite um evento, o valor desse evento consiste em um objeto de resposta da requisição
+        3) Nossa necessidade não é recuperar o objeto de resposta da requisição, e sim apenas o conteúdo da requisição, logo precisamos transformar o valor contido no evento emitido pelo Observable, para fazer isso utilizamos o operador de transformação map()
+        4) O map irá transformar o valor de cada um dos eventos emitidos na stream do Observable para um outro valor, retornando ao término o mesmo Observable, porém com os valores dos eventos modificados de acordo com a função de callback. Nesse caso, estamos modificando o valor original que consiste em um objeto de resposta para um simples array de ofertas. 
+        5) O retorno do método pesquisaOfertas será um observable que manipula um array de ofertas (exatamente conforme sua assinatura)
+
+
+        Subscribe
+
+        1) Ao efetuar um subscripe passamos a assistir os evetnos que são disparados em sua stream, nesse caso estamso recebendo um Observable de array de ofertas.
+
+        2) Ao definir os Handles (dados, erro e conslusão) estamos definindo como o valor emitido por um evento deve ser tratado dentro da nossa aplicação. 
+
+
+
 
 
        
