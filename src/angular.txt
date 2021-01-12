@@ -609,8 +609,21 @@ Services (serviços)
         2) Ao definir os Handles (dados, erro e conslusão) estamos definindo como o valor emitido por um evento deve ser tratado dentro da nossa aplicação. 
 
 
-        
+        Subject
 
+        E se criarmos um Observble para gerenciar (a partir de sua pŕopria stream de eventos) a emissão dos eventos de outro Observable?
+
+
+        O subject funciona como um proxy atuando tanto como observável quanto observador
+
+        Na condição de observador: Capaz de receber parâmetros e implimentar operadores para produção de uma stream de eventos de Observable.
+
+        Na condição de observável: Passível de receber uma inscrição (subcribe) para lidar com dados, erro e finalização da stream de eventos.
+
+
+        Switch map
+
+          Se inscreve no observável mais recente e cancela a inscrição nos observáveis anteriores
 
 
 
