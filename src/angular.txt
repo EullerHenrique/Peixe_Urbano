@@ -610,32 +610,33 @@ Services (serviços)
 
 
         Exemplo:
+
+          //Observable (Observavél)
+          this.myObservable = this.OfertasService.pesquisaOfertas(termoDaPesquisa);
+
+          //Observer (Observador)
+          let myObserver = {
+
+          next: (ofertas: Oferta[]) => { 
+            console.log(ofertas)
+          },
         
-        //Observable (Observavél)
-        this.myObservable = this.OfertasService.pesquisaOfertas(termoDaPesquisa);
+          error: (erro: any) => {
+            console.log('Erro status: ', erro.status);
+          }, 
 
-        //Observer (Observador)
-        let myObserver = {
-
-        next: (ofertas: Oferta[]) => { 
-          console.log(ofertas)
-        },
-      
-        error: (erro: any) => {
-          console.log('Erro status: ', erro.status);
-        }, 
-
-        complete: () => {
-          console.log('Valor recebido com sucesso!')
+          complete: () => {
+            console.log('Valor recebido com sucesso!')
+          }
         }
-      }
 
-    //Inscreve um observador (myObserver) em um observavél(myObservable)
-    //Obs: Toda vez que o observavel adquirir um novo valor, o observador será notificado (o observador receberá o novo valor)
+        //Inscreve um observador (myObserver) em um observavél(myObservable)
+        //Obs: Toda vez que o observavel adquirir um novo valor, o observador será notificado (o observador receberá o novo valor)
 
-    this.myObservable.subscribe(myObserver)
+        this.myObservable.subscribe(myObserver)
 
-    */
+      
+      
 
         Subject
 
