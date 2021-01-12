@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/debounceTime';
 import { OfertasService } from '../ofertas.service';
 import { Oferta } from '../shared/oferta.model';
 
@@ -22,6 +23,7 @@ export class TopComponent implements OnInit {
 
 
     this.ofertas = this.subjectPesquisa
+                       .debounceTime(1000)
                        .switchMap((termoDaPesquisa: string) => {
                           console.log('requisicao http para api');
                           return this.OfertasService.pesquisaOfertas(termoDaPesquisa);

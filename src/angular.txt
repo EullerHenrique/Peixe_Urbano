@@ -611,6 +611,8 @@ Services (serviços)
 
         Exemplo:
 
+        /////////////////////////////////////////////////////////////////
+
           //Observable (Observavél)
           this.myObservable = this.OfertasService.pesquisaOfertas(termoDaPesquisa);
 
@@ -636,23 +638,29 @@ Services (serviços)
         this.myObservable.subscribe(myObserver)
 
       
-      
+        ////////////////////////////////////////////////////////
 
         Subject
 
-        E se criarmos um Observable para gerenciar (a partir de sua pŕopria stream de eventos) a emissão dos eventos de outro Observable?
+          E se criarmos um Observable para gerenciar (a partir de sua pŕopria stream de eventos) a emissão dos eventos de outro Observable?
 
 
-        O subject funciona como um proxy atuando tanto como observável quanto observador
+          O subject funciona como um proxy atuando tanto como observável quanto observador
 
-        Na condição de observador: Capaz de receber parâmetros e implimentar operadores para produção de uma stream de eventos de Observable.
+          Na condição de observador: Capaz de receber parâmetros e implimentar operadores para produção de uma stream de eventos de Observable.
 
-        Na condição de observável: Passível de receber uma inscrição (subcribe) para lidar com dados, erro e finalização da stream de eventos.
+          Na condição de observável: Passível de receber uma inscrição (subcribe) para lidar com dados, erro e finalização da stream de eventos.
 
 
         Switch map
 
           Se inscreve no observável mais recente e cancela a inscrição nos observáveis anteriores
+
+
+        Debounce time
+
+          Executa a ação do switch map após 1 segundo
+
 
 
 
