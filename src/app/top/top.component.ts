@@ -40,7 +40,7 @@ export class TopComponent implements OnInit {
     }
 
     //Inscreve um observador (myObserver) em um observavél(myObservable)
-    //Obs: Toda vez que um o observador adquirir um novo valor, o observador //será notificado (o observador receberá o novo valor)
+    //Obs: Toda vez que o observavel adquirir um novo valor, o observador será notificado (o observador receberá o novo valor)
 
     this.myObservable.subscribe(myObserver)
 

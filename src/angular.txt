@@ -1,7 +1,6 @@
 Angular
 
-Basicamente o AngularJS é um framework de código aberto usado para construir aplicativos para web baseados em uma única página
-    dinâmica
+Basicamente o AngularJS é um framework de código aberto usado para construir aplicativos para web baseados em uma única página dinâmica
 
 
 Explicações mais detalhadas:
@@ -576,15 +575,18 @@ Services (serviços)
       
       Observables
 
-        map -> O operador Map aplica uma função de sua escolha a cada item emitido pela fonte Observable e retorna um Observable com os              resultados dessas aplicações.
-               Transforma os itens emitidos por um Observable ao aplicar uma função a cada item
+        map -> O operador Map aplica uma função de sua escolha a cada item      emitido pela fonte Observable e retorna um Observable com os           resultados dessas aplicações.
+        
+        Transforma os itens emitidos por um Observable ao aplicar uma função a cada item
 
         retry(n: number) -> Faz n requisições ao servidor até o código de requisição feita com sucesso ser recebido
                  
-        subscribe =  fica "escutando" alterações na rota. Quando uma alteração é "escutada" podemos reagir a mudança (reactive programming).
+        subscribe ->  fica "escutando" alterações na rota. Quando uma alteração é "escutada" podemos reagir a mudança (reactive programming).
         
         next -> Recebe o valor emitido pelo observavél
+        
         erro -> Recebe o erro emitido pelo observavél
+        
         completed -> Indica que o valor foi recebido com sucesso
 
 
