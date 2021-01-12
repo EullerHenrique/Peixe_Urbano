@@ -609,6 +609,34 @@ Services (serviços)
         2) Ao definir os Handles (dados, erro e conslusão) estamos definindo como o valor emitido por um evento deve ser tratado dentro da nossa aplicação. 
 
 
+        Exemplo:
+        
+        //Observable (Observavél)
+        this.myObservable = this.OfertasService.pesquisaOfertas(termoDaPesquisa);
+
+        //Observer (Observador)
+        let myObserver = {
+
+        next: (ofertas: Oferta[]) => { 
+          console.log(ofertas)
+        },
+      
+        error: (erro: any) => {
+          console.log('Erro status: ', erro.status);
+        }, 
+
+        complete: () => {
+          console.log('Valor recebido com sucesso!')
+        }
+      }
+
+    //Inscreve um observador (myObserver) em um observavél(myObservable)
+    //Obs: Toda vez que o observavel adquirir um novo valor, o observador será notificado (o observador receberá o novo valor)
+
+    this.myObservable.subscribe(myObserver)
+
+    */
+
         Subject
 
         E se criarmos um Observable para gerenciar (a partir de sua pŕopria stream de eventos) a emissão dos eventos de outro Observable?

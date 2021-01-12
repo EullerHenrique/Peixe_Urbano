@@ -13,7 +13,7 @@ import { Oferta } from '../shared/oferta.model';
 })
 export class TopComponent implements OnInit {
 
-  private myObservable: Observable<Oferta[]>;
+  private ofertas: Observable<Oferta[]>;
   private subjectPesquisa: Subject<string> = new Subject<string>();
 
   constructor(private OfertasService: OfertasService) { }
@@ -21,14 +21,18 @@ export class TopComponent implements OnInit {
   ngOnInit() {
 
 
-    this.myObservable = this.subjectPesquisa
+    this.ofertas = this.subjectPesquisa
                        .switchMap((termoDaPesquisa: string) => {
                           console.log('requisicao http para api');
                           return this.OfertasService.pesquisaOfertas(termoDaPesquisa);
                        });
 
-    
-    this.myObservable.subscribe((ofertas: Oferta[]) => 
+    // Observeble (Observável)
+    // Subjcect atuando na condiçãode observável
+
+    //Obs: Toda vez que o observavel adquirir um novo valor, uma função de callback receberá o novo valor
+
+    this.ofertas.subscribe((ofertas: Oferta[]) => 
                                 console.log(ofertas)
                               );                  
 
@@ -43,36 +47,6 @@ export class TopComponent implements OnInit {
 
     console.log('keyup caracter', termoDaPesquisa);
     this.subjectPesquisa.next(termoDaPesquisa);
-
-
-
-    /*
-
-    //Observable (Observavél)
-    this.myObservable = this.OfertasService.pesquisaOfertas(termoDaPesquisa);
-
-    //Observer (Observador)
-    let myObserver = {
-
-      next: (ofertas: Oferta[]) => { 
-        console.log(ofertas)
-      },
-      
-      error: (erro: any) => {
-        console.log('Erro status: ', erro.status);
-      }, 
-
-      complete: () => {
-        console.log('Valor recebido com sucesso!')
-      }
-    }
-
-    //Inscreve um observador (myObserver) em um observavél(myObservable)
-    //Obs: Toda vez que o observavel adquirir um novo valor, o observador será notificado (o observador receberá o novo valor)
-
-    this.myObservable.subscribe(myObserver)
-
-    */
 
   }
 
