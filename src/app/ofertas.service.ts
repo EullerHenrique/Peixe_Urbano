@@ -1,4 +1,4 @@
-import { Http } from "@angular/http";
+import { Http, Response } from "@angular/http";
 import { Injectable } from "@angular/core";
 import { Oferta } from "./shared/oferta.model";
 import { URL_API_OFERTAS, URL_API_COMO_USAR, URL_API_ONDE_FICA } from "./app.api";
@@ -23,7 +23,7 @@ export class OfertasService{
     .toPromise()
     .then(
       
-      (ofertas: any) => {
+      (ofertas: Response) => {
 
         return ofertas.json();
      
@@ -38,7 +38,7 @@ export class OfertasService{
       .toPromise()
       .then(
       
-      (ofertas: any) => {
+      (ofertas: Response) => {
 
         return ofertas.json();
      
@@ -52,7 +52,7 @@ export class OfertasService{
       .toPromise()
       .then(
       
-      (oferta: any) => {
+      (oferta: Response) => {
 
         return oferta.json().shift(); //shift() = extrai o conteúdo presente na primeira posição do array
      
@@ -64,7 +64,7 @@ export class OfertasService{
       return this
       .http.get(`${URL_API_COMO_USAR}?id=${id}`)
       .toPromise()
-      .then( (como_usar: any) => {
+      .then( (como_usar: Response) => {
         return como_usar.json()[0].descricao;
       })
   }
@@ -73,7 +73,7 @@ export class OfertasService{
       return this
       .http.get(`${URL_API_ONDE_FICA}?id=${id}`)
       .toPromise()
-      .then( (como_usar: any) => {
+      .then( (como_usar: Response) => {
         return como_usar.json()[0].descricao;
       })
   }
@@ -81,7 +81,7 @@ export class OfertasService{
   public pesquisaOfertas(termoDaPesquisa: string): Observable<Oferta[]>{
       return this.http.get(`${URL_API_OFERTAS}?descricao_like=${termoDaPesquisa}`)
       .retry(10)
-      .map( (ofertas: any) => {
+      .map( (ofertas: Response) => {
         return ofertas.json();
       })
   
