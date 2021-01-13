@@ -15,8 +15,8 @@
           <div class="card mt-3 mb-3">
             <img class="card-img-top" [src]="oferta.imagens[0].url">
             <div class="card-body">
-              <p class="card-text">{{oferta.titulo}}</p>
-              <h4 class="card-title text-center">{{oferta.descricao}}</h4>
+              <p class="card-text">{{oferta.empresa}}</p>
+              <h4 class="card-title text-center">{{oferta.produto}}</h4>
               <p class="preco d-flex justify-content-end"> {{oferta.valor | currency: 'BRL': symbol}}</p>
             </div>
           </div>

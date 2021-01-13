@@ -3,8 +3,8 @@
 	{
 		"id": 1,
 		"categoria": "restaurante",
-		"titulo": "Burguer King",
-	  "descricao": "Whopper Furioso",
+		"empresa": "Burguer King",
+	  "produto": "Whopper Furioso",
 		"valor": 15.90,
 		"destaque": true,
 		"imagens": [
@@ -17,8 +17,8 @@
 	{
 		"id": 2,
 		"categoria": "restaurante",
-		"titulo": "Subway",
-		"descricao": "Carne Supreme",
+		"empresa": "Subway",
+		"produto": "Carne Supreme",
 		"valor": 11.90,
 		"destaque": true,
 		"imagens": [
@@ -32,8 +32,8 @@
 	{
 		"id": 3,
 		"categoria": "restaurante",
-		"titulo": "Pizza Hut",
-		"descricao": "Pizza De Calabresa",
+		"empresa": "Pizza Hut",
+		"produto": "Pizza De Calabresa",
     "valor": 39.90,
 		"destaque": true,
 		"imagens": [
@@ -46,8 +46,8 @@
   {
 			"id": 4,
 			"categoria": "diversao",
-			"titulo": "Thermas Dos Laranjais",
-			"descricao": "Ingresso",
+			"empresa": "Thermas Dos Laranjais",
+			"produto": "Ingresso",
 			"valor": 80.90,
 			"destaque": true,
 			"imagens": [
@@ -62,8 +62,8 @@
 		{
 			"id": 5,
 			"categoria": "diversao",
-			"titulo": "Hot Park",
-			"descricao": "Bilhete",
+			"empresa": "Hot Park",
+			"produto": "Bilhete",
 			"valor": 115.90,
 			"destaque": true,
 			"imagens": [
@@ -74,8 +74,8 @@
 		{
 			"id": 6,
 			"categoria": "diversao",
-			"titulo": "Beto Carrero World",
-			"descricao": "Passaporte",
+			"empresa": "Beto Carrero World",
+			"produto": "Passaporte",
 			"valor": 99.90,
 			"destaque": true,
 			"imagens": [

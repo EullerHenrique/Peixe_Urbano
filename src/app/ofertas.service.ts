@@ -4,7 +4,6 @@ import { Oferta } from "./ofertas.model";
 import { URL_API_OFERTAS, URL_API_COMO_USAR, URL_API_ONDE_FICA } from "./app.api";
 
 import 'rxjs/add/operator/toPromise';
-import { HttpBackend } from "@angular/common/http";
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -79,7 +78,7 @@ export class OfertasService{
   }
 
   public pesquisaOfertas(termoDaPesquisa: string): Observable<Oferta[]>{
-      return this.http.get(`${URL_API_OFERTAS}?descricao_like=${termoDaPesquisa}`)
+      return this.http.get(`${URL_API_OFERTAS}?produto_like=${termoDaPesquisa}`)
       .retry(10)
       .map( (ofertas: Response) => {
         return ofertas.json();
