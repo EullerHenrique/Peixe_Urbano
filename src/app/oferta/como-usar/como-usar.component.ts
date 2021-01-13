@@ -12,8 +12,7 @@ export class ComoUsarComponent implements OnInit {
 
   public como_usar: string = `.`;
 
-  constructor(private route: ActivatedRoute, private ofertasService: 
-  OfertasService) {  }
+  constructor(private route: ActivatedRoute, private ofertasService: OfertasService) {  }
 
   ngOnInit() {
 
