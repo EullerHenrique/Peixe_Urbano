@@ -678,9 +678,11 @@ Services (serviços)
 
           Força a inferência de um tipo
 
-        DistinctUntilChanged
+        DistinctUntilChanged 
 
           Se a pesquisa atual for igual a anterior, a função switch map não será executada
+
+          Lembrete: Não funcionou, use pipes após aprender sobre pipes na seção 12
 
 
 
