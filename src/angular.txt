@@ -685,9 +685,43 @@ Services (serviços)
           Lembrete: Não funcionou, use pipes após aprender sobre pipes na seção 12
 
 
+      Pipes
+
+      Pipes são mecanismos de transformação de dados utilizados nos templates para prouzir uma representação customizada da informação a ser exibida.
+
+      ex: 
+      
+
+        // Pipes json, uppercase e lowercase
+
+        // Template
+
+        {{ ofertas 2 | json }}
+        {{ oferta.descricao | uppercase }}
+        {{ oferta.descricao | lowecase  }}
 
 
-       
+
+
+        // Pipe Date 
+
+        //Component
+   
+        public data: any = new Date(2017, 8, 30)
+
+        //Template
+
+        {{ data }} -> Sat Sep 30 2017 00:00:00 GTM-0300 (Hora oficial do Brasil)
+        {{ data | date }} -> Sep 30, 2017
+        {{ data | date: 'short'}} -> 9/30/2017, 12:00 AM
+        {{ data | date: 'dd/MM/yyyy' }} -> 30/09/2017
+
+
+        Pipe Currency
+
+        {{oferta.valor | currency: 'BRL'}}
+
+        
 
 
             
