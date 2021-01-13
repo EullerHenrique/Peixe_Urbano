@@ -18,6 +18,7 @@ import { Oferta } from '../shared/oferta.model';
 export class TopComponent implements OnInit {
 
   private ofertas: Observable<Oferta[]>;
+  private ofertas2: Oferta[];
   private subjectPesquisa: Subject<string> = new Subject<string>();
 
   constructor(private OfertasService: OfertasService) { }
@@ -50,9 +51,10 @@ export class TopComponent implements OnInit {
 
     //Obs: Toda vez que o observavel adquirir um novo valor, uma função de callback receberá o novo valor
 
-    this.ofertas.subscribe((ofertas: Oferta[]) => 
-                                console.log(ofertas)
-                              );                  
+    this.ofertas.subscribe((ofertas: Oferta[]) => {
+                                console.log(ofertas);
+                                this.ofertas2 = ofertas;
+                            });                  
 
 
   }
