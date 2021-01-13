@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
@@ -15,7 +15,8 @@ import { ComoUsarComponent } from './oferta/como-usar/como-usar.component';
 import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
 
 @NgModule({
-  declarations: [ 
+  declarations: 
+  [ 
     AppComponent,
     TopComponent,
     HomeComponent,
@@ -27,13 +28,17 @@ import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
     OndeFicaComponent 
   ],
   imports: 
-       [ 
-         BrowserModule, 
-         HttpModule,
-         RouterModule.forRoot(ROUTES) //forRoot -> As rotas são disponibilizadas globalmente 
-      ],
-
-  bootstrap:[ 
+  [ 
+    BrowserModule, 
+    HttpModule,
+    RouterModule.forRoot(ROUTES) //forRoot -> As rotas são disponibilizadas globalmente 
+  ],
+  providers: 
+  [
+    { provide: LOCALE_ID, useValue: 'pt-br'}
+  ],
+  bootstrap:
+  [ 
     AppComponent 
   ]
 })

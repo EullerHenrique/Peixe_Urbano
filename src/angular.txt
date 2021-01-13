@@ -721,7 +721,14 @@ Services (serviços)
 
         {{oferta.valor | currency: 'BRL'}}
 
-        
+
+        Ajustar a formatação de moedas para o padrão brasileiro
+          1) Instalação e um pacote de internacionalização (IntelJS)
+          2) Configurar o pacote em polyfills.ts 
+          3) Confugurar o token LOCALE_ID no módulo que passará a ter suporte ao pacote 
+
+          
+
 
 
             
