@@ -1,6 +1,6 @@
 import { Http, Response } from "@angular/http";
 import { Injectable } from "@angular/core";
-import { Oferta } from "ofertas.model";
+import { Oferta } from "./ofertas.model";
 import { URL_API_OFERTAS, URL_API_COMO_USAR, URL_API_ONDE_FICA } from "./app.api";
 
 import 'rxjs/add/operator/toPromise';
