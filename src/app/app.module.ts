@@ -14,6 +14,11 @@ import { OfertaComponent } from './oferta/oferta.component';
 import { ComoUsarComponent } from './oferta/como-usar/como-usar.component';
 import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
 
+
+import { registerLocaleData } from "@angular/common";
+import localePt from "@angular/common/locales/pt";
+registerLocaleData(localePt);
+
 @NgModule({
   declarations: 
   [ 
@@ -35,7 +40,7 @@ import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
   ],
   providers: 
   [
-    { provide: LOCALE_ID, useValue: 'pt-br'}
+    { provide: LOCALE_ID, useValue: 'pt-Br'}
   ],
   bootstrap:
   [ 
