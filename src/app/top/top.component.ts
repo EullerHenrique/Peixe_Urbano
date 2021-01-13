@@ -3,6 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged'
 import 'rxjs/add/observable/of';
 import { OfertasService } from '../ofertas.service';
 import { Oferta } from '../shared/oferta.model';
@@ -25,6 +26,7 @@ export class TopComponent implements OnInit {
 
     this.ofertas = this.subjectPesquisa
                        .debounceTime(1000)
+                       .distinctUntilChanged()
                        .switchMap((termoDaPesquisa: string) => {
                           console.log('requisicao http para api');
 

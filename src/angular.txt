@@ -657,14 +657,30 @@ Services (serviços)
           Se inscreve no observável mais recente e cancela a inscrição nos observáveis anteriores
 
 
+        //Envia o valor presente na variável termoDaPesquisa para o parâmetro termoDaPesquisa presente na função switchMap
+
+        this.subjectPesquisa.next(termoDaPesquisa)
+
+         | |
+          V
+
+        switchMap(termoDaPesquisa: string){
+          ....
+        }
+
+
         Debounce time
 
-          Executa a ação do switch map após 1 segundo
+          Executa a ação do switch map após n segundos
 
         
         Of
 
           Força a inferência de um tipo
+
+        DistinctUntilChanged
+
+          Se a pesquisa atual for igual a anterior, a função switch map não será executada
 
 
 
