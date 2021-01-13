@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Oferta } from '../shared/oferta.model';
+import { Oferta } from '../ofertas.model';
 import { OfertasService} from "../ofertas.service";
 
 

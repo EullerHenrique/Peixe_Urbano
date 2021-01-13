@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
-import '../shared/rxjs-extensions'
+import '../app.rxjs-extensions'
 import { OfertasService } from '../ofertas.service';
-import { Oferta } from '../shared/oferta.model';
+import { Oferta } from '../ofertas.model';
 
 @Component({
   selector: 'peixe-urbano-top',
