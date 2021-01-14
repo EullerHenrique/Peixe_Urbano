@@ -25,7 +25,7 @@ export class OfertaComponent implements OnInit, OnDestroy {
           .then( (oferta: Oferta) =>{
             this.oferta = oferta;
           });
-    })
+    }) 
 
   }
 
