@@ -14,7 +14,6 @@ import { Oferta } from '../ofertas.model';
 export class TopComponent implements OnInit {
 
   private ofertas: Observable<Oferta[]>;
-  private ofertas2: Oferta[];
   private subjectPesquisa: Subject<string> = new Subject<string>();
 
   constructor(private OfertasService: OfertasService) { }
@@ -38,21 +37,6 @@ export class TopComponent implements OnInit {
                           console.log(err);
                           return Observable.of<Oferta[]>([]);
                        });
-
-
-
-
-    // Observeble (Observável)
-    // Subjcect atuando na condição de observável
-
-    //Obs: Toda vez que o observavel adquirir um novo valor, uma função de callback receberá o novo valor
-
-    this.ofertas.subscribe((ofertas: Oferta[]) => {
-                                console.log(ofertas);
-                                this.ofertas2 = ofertas;
-                            });                  
-
-
   }
 
   public pesquisa(termoDaPesquisa: string): void{
