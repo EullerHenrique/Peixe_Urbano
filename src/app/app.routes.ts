@@ -14,11 +14,14 @@ export const ROUTES: Routes = [
   { path: 'diversao', component: DiversaoComponent},
   { path: 'oferta', component: HomeComponent},
   { path: 'oferta/:id', component: OfertaComponent,
-   children:[
-    {path: '', component: ComoUsarComponent},
-    {path: 'como-usar', component: ComoUsarComponent},
-    {path: 'onde-fica', component: OndeFicaComponent}
-  ]},
+   children:
+   
+    [
+      {path: '', component: ComoUsarComponent},
+      {path: 'como-usar', component: ComoUsarComponent},
+      {path: 'onde-fica', component: OndeFicaComponent}
+    ]
+  },
   { path: 'ordem-compra', component: OrdemCompraComponent}
 
 ]
