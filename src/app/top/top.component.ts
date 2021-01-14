@@ -50,4 +50,10 @@ export class TopComponent implements OnInit {
 
   }
 
+  public limpaPesquisa():void{
+
+    this.subjectPesquisa.next('');
+    
+  }
+
 }
