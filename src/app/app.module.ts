@@ -19,6 +19,9 @@ import { registerLocaleData } from "@angular/common";
 import localePt from "@angular/common/locales/pt";
 registerLocaleData(localePt);
 
+
+import { DescricaoReduzida } from './app.pipe';
+
 @NgModule({
   declarations: 
   [ 
@@ -30,7 +33,8 @@ registerLocaleData(localePt);
     DiversaoComponent,
     OfertaComponent,
     ComoUsarComponent,
-    OndeFicaComponent 
+    OndeFicaComponent,
+    DescricaoReduzida 
   ],
   imports: 
   [ 

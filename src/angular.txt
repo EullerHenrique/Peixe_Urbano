@@ -722,17 +722,49 @@ Services (serviços)
         {{oferta.valor | currency: 'BRL'}}
 
 
-        Ajustar a formatação de moedas para o padrão brasileiro
+        Formatação de moedas para o padrão brasileiro
+        
           1) Instalação e um pacote de internacionalização (IntelJS)
           2) Configurar o pacote em polyfills.ts 
           3) Confugurar o token LOCALE_ID no módulo que passará a ter suporte ao pacote 
 
-          
+        Criação de pipes
 
+
+        //newpipe.ts
+
+        import { Pipe, PipeTransform } from '@angular/core'
+
+        @pipe({
+          name: 'DescricaoReduzida'
+        })
+        export class DescricaoReduzida implements PipeTransform {
+          
+          transform(texto: string): string {
+            if(texto.length > 15){
+              return text.substr(0,15) + '...';
+            }else{
+              return text;
+            }
+          }
+
+        }
+
+        // app.module.ts
+
+        import { DescricaoReduzida } from '../newpipe.ts'
+
+        declarations: {
+          DescricaoReduzida
+        }
+
+        // topo.component.ts
+
+        {{ oferta.produto | DescricaoReduzida }}
 
 
             
-
+      
 
 
 
