@@ -12,6 +12,10 @@ export class OrdemCompraComponent implements OnInit {
   private complemento: string = '';
   private formaDePagamento: string = '';
 
+  private enderecoValido: boolean;
+  private numeroValido: boolean;
+  private complementoValido: boolean;
+  private formaDePagamentoValido: boolean;
 
   constructor() { }
 
@@ -21,6 +25,12 @@ export class OrdemCompraComponent implements OnInit {
   public atualizaEndereco(endereco: string): void{
 
     this.endereco = endereco;
+
+    if(this.endereco.length > 3){
+      this.enderecoValido = true;
+    }else{
+      this.enderecoValido = false;
+    }
 
   }
 
