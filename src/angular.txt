@@ -795,4 +795,10 @@ Services (serviços)
       
       Forms
       
+        1) Two-way binding
+        2) Template Forms
+        3) Reactive Forms
+
         Novalidate (impede a validação de formulários pelo navegador)
+
+
