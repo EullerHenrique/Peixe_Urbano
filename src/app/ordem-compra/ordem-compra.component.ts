@@ -7,15 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdemCompraComponent implements OnInit {
 
+  //Valores dos campos
+
   private endereco: string = '';
   private numero: number = null;
   private complemento: string = '';
   private formaDePagamento: string = '';
 
+
+  //Controles de validação dos campos
+
   private enderecoValido: boolean;
   private numeroValido: boolean;
   private complementoValido: boolean;
   private formaDePagamentoValido: boolean;
+
+  //Estado primitivos dos campos (pristine)
+
+  private enderecoEstadoPrimitivo: boolean = true;
+  private numeroEstadoPrimitivo: boolean = true;
+  private complementoEstadoPrimitivo: boolean =  true;
+  private formaDePagamentoEstadoPrimitivo: boolean = true;
+
 
   constructor() { }
 
@@ -25,6 +38,8 @@ export class OrdemCompraComponent implements OnInit {
   public atualizaEndereco(endereco: string): void{
 
     this.endereco = endereco;
+
+    this.enderecoEstadoPrimitivo = false;
 
     if(this.endereco.length > 3){
       this.enderecoValido = true;
@@ -38,6 +53,8 @@ export class OrdemCompraComponent implements OnInit {
 
     this.numero = numero;
 
+    this.numeroEstadoPrimitivo = false;
+
     if(this.numero > 0 ){
       this.numeroValido =  true;
     }else{
@@ -48,6 +65,8 @@ export class OrdemCompraComponent implements OnInit {
   public atualizaComplemento(complemento: string): void{
 
     this.complemento = complemento;
+
+    this.complementoEstadoPrimitivo = false;
 
     if(this.complemento.length > 0){
       
@@ -60,6 +79,8 @@ export class OrdemCompraComponent implements OnInit {
   public atualizaFormaDePagamento(formaDePagamento: string): void{
 
     this.formaDePagamento = formaDePagamento;
+
+    this.formaDePagamentoEstadoPrimitivo = false;
 
     if(this.formaDePagamento.length > 0){
 

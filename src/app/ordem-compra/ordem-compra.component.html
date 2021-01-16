@@ -38,7 +38,7 @@
         
             <input 
               type="text"
-              class="form-control {{ enderecoValido ?'is-valid': 'is-invalid'}}"
+              class="form-control {{ enderecoEstadoPrimitivo? '': (enderecoValido ?'is-valid': 'is-invalid') }}"
               placeholder="Endereço" 
               autocomplete="off" 
               minlength="5" 
@@ -48,11 +48,18 @@
               (input)="atualizaEndereco(inputEndereco.value)"
             >
         
-            <div class="invalid-feedback">
+  
+          <div class="valid-feedback">
+
+            <small class="form-text text-success">Endereço válido</small>
+
+          </div>
+
+          <div class="invalid-feedback">
         
-              Endereço inválido
+            <small class="form-text text-danger">Endereço inválido</small>
         
-            </div>
+          </div>
         
         </div>
 
@@ -60,7 +67,7 @@
         
             <input
               type="text" 
-              class="form-control {{ numeroValido ? 'is-valid': 'is-invalid' }}" 
+              class="form-control {{ numeroEstadoPrimitivo? '': (numeroValido ? 'is-valid': 'is-invalid') }}" 
               placeholder="Número" 
               autocomplete="off" 
               minlength="1" 
@@ -69,7 +76,18 @@
               #inputNumero
               (input)="atualizaNumero(inputNumero.value)"
             >
-            <small class="form-text text-muted">Ok</small>
+           
+          <div class="valid-feedback">
+
+            <small class="form-text text-success">Número válido</small>
+
+          </div>
+
+          <div class="invalid-feedback">
+        
+            <small class="form-text text-danger">Número inválido</small>
+        
+          </div>
 
         </div>
 
@@ -77,14 +95,21 @@
         
             <input 
               type="text" 
-              class="form-control {{ ccomplementoValido ? 'is-valid': '' }}"
+              class="form-control {{ complementoEstadoPrimitivo? '': (complementoValido ? 'is-valid': '') }}"
               placeholder="Complemento" 
               autocomplete="off"
               [value] = "complemento"
               #inputComplemento
               (input)="atualizaComplemento(inputComplemento.value)"
         >
-        
+
+
+          <div class="valid-feedback">
+
+            <small class="form-text text-success">Complemento válido</small>
+
+          </div>
+
         </div>
 
 			</div>
@@ -97,7 +122,7 @@
 
 				<div class="form-group col-md-3">
 					
-          <select class="form-control {{ formaDePagamentoValido ? 'is-valid': 'is-invalid' }}"
+          <select class="form-control {{ formaDePagamentoEstadoPrimitivo?'': (formaDePagamentoValido ? 'is-valid': 'is-invalid') }}"
           #selectFormaDePagamento
           (change)="atualizaFormaDePagamento(selectFormaDePagamento.value)"
           >
@@ -108,7 +133,18 @@
          
           </select>
 
-				  <div class="invalid-feedback">Selecione uma forma de pagamento</div>
+
+          <div class="valid-feedback">
+
+            <small class="form-text text-success">Forma de pagamento válida</small>
+
+          </div>
+
+          <div class="invalid-feedback">
+        
+            <small class="form-text text-danger">Selecione uma forma de pagamento</small>
+        
+          </div>
 				
         </div>
 		
