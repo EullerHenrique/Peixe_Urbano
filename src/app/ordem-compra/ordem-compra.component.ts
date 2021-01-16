@@ -38,7 +38,7 @@ export class OrdemCompraComponent implements OnInit {
 
     this.numero = numero;
 
-    if(this.numero != undefined ){
+    if(this.numero > 0 ){
       this.numeroValido =  true;
     }else{
       this.numeroValido = false;
@@ -48,6 +48,12 @@ export class OrdemCompraComponent implements OnInit {
   public atualizaComplemento(complemento: string): void{
 
     this.complemento = complemento;
+
+    if(this.complemento.length > 0){
+      
+      this.complementoValido = true;
+
+    }
   
   }
   
@@ -62,7 +68,7 @@ export class OrdemCompraComponent implements OnInit {
     }else{
 
       this.formaDePagamentoValido = false;
-      
+
     }
 
   }

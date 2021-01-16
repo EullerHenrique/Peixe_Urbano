@@ -77,7 +77,7 @@
         
             <input 
               type="text" 
-              class="form-control is-valid" 
+              class="form-control {{ ccomplementoValido ? 'is-valid': '' }}"
               placeholder="Complemento" 
               autocomplete="off"
               [value] = "complemento"
