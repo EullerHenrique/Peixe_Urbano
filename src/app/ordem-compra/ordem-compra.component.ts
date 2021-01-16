@@ -38,17 +38,32 @@ export class OrdemCompraComponent implements OnInit {
 
     this.numero = numero;
 
+    if(this.numero != undefined ){
+      this.numeroValido =  true;
+    }else{
+      this.numeroValido = false;
+    }
   }
 
   public atualizaComplemento(complemento: string): void{
 
     this.complemento = complemento;
-
+  
   }
   
   public atualizaFormaDePagamento(formaDePagamento: string): void{
 
     this.formaDePagamento = formaDePagamento;
+
+    if(this.formaDePagamento.length > 0){
+
+      this.formaDePagamentoValido = true;      
+
+    }else{
+
+      this.formaDePagamentoValido = false;
+      
+    }
 
   }
 
