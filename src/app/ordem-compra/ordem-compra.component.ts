@@ -40,7 +40,7 @@ export class OrdemCompraComponent implements OnInit {
 
   ngOnInit() {
 
-    this.ordemCompraService.efetivarCompra();
+    //this.ordemCompraService.efetivarCompra();
     
   }
 
