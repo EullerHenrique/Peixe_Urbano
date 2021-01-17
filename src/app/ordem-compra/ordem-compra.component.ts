@@ -22,13 +22,17 @@ export class OrdemCompraComponent implements OnInit {
   private complementoValido: boolean;
   private formaDePagamentoValido: boolean;
 
-  //Estado primitivos dos campos (pristine)
+  //Estados primitivos dos campos (pristine)
 
   private enderecoEstadoPrimitivo: boolean = true;
   private numeroEstadoPrimitivo: boolean = true;
   private complementoEstadoPrimitivo: boolean =  true;
   private formaDePagamentoEstadoPrimitivo: boolean = true;
 
+
+  //Controla botão de confirmar compra
+
+  private formEstado: string = 'disabled';
 
   constructor() { }
 
@@ -47,6 +51,8 @@ export class OrdemCompraComponent implements OnInit {
       this.enderecoValido = false;
     }
 
+    this.habilitaForm();
+
   }
 
   public atualizaNumero(numero: number): void{
@@ -60,6 +66,9 @@ export class OrdemCompraComponent implements OnInit {
     }else{
       this.numeroValido = false;
     }
+
+    this.habilitaForm();
+
   }
 
   public atualizaComplemento(complemento: string): void{
@@ -73,6 +82,9 @@ export class OrdemCompraComponent implements OnInit {
       this.complementoValido = true;
 
     }
+
+    this.habilitaForm();
+
   
   }
   
@@ -91,6 +103,23 @@ export class OrdemCompraComponent implements OnInit {
       this.formaDePagamentoValido = false;
 
     }
+
+    this.habilitaForm();
+
+  }
+
+  public habilitaForm(): void{
+
+    if(this.enderecoValido === true && this.numeroValido === true &&this.formaDePagamentoValido === true){
+
+        this.formEstado = '';
+
+    }else{
+
+      this.formEstado = 'disabled';
+      
+    }
+    
 
   }
 
