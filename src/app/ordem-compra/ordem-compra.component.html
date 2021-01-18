@@ -2,7 +2,7 @@
 
 	<div class="ordem-compra">
 	
-  	<form class="mt-5 mb-5" novalidate>
+  	<form class="mt-5 mb-5" novalidate *ngIf="idPedido === undefined">
 
 			<h5 class="text-center">Sua Compra</h5>
 			<hr>
@@ -163,6 +163,12 @@
           
 	  </form>
 	
+  </div>
+
+  <div class="ordem-compra" *ngIf="idPedido !== undefined">
+
+    <app-ordem-compra-sucesso [idPedido]="idPedido"></app-ordem-compra-sucesso> 
+
   </div>
 
 </div>

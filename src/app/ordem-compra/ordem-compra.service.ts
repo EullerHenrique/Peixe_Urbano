@@ -10,7 +10,7 @@ export class OrdemCompraService{
 
   constructor(private http: Http){}
 
-  public efetivarCompra(ordemCompra:OrdemCompra): Observable<any>{
+  public efetivarCompra(ordemCompra:OrdemCompra): Observable<number>{
 
     let headers: Headers = new Headers();
     headers.append('Content-type','application/json'); //append = acrescentar
@@ -22,7 +22,7 @@ export class OrdemCompraService{
         headers: headers
       })
     )
-    .map((resposta: Response ) => console.log(resposta.json()));
+    .map((resposta: Response ) => resposta.json().id);
 
   }
 

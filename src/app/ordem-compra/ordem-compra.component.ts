@@ -34,15 +34,17 @@ export class OrdemCompraComponent implements OnInit {
 
   private formEstado: string = "disabled";
 
-  // Ordem Compra
+  // Ordem de compra (pedido)
 
   private ordemCompra: OrdemCompra = new OrdemCompra("", null, "", "");
 
+  // Id do pedido realizado
+
+  public idPedido: number;
+
   constructor(private ordemCompraService: OrdemCompraService) {}
 
-  ngOnInit() {
-    //this.ordemCompraService.efetivarCompra();
-  }
+  ngOnInit() {}
 
   public atualizaEndereco(endereco: string): void {
     this.endereco = endereco;
@@ -116,6 +118,8 @@ export class OrdemCompraComponent implements OnInit {
     this.ordemCompra.complemento = this.complemento;
     this.ordemCompra.formaDePagamento = this.formaDePagamento;
 
-    this.ordemCompraService.efetivarCompra(this.ordemCompra).subscribe();
+    this.ordemCompraService.efetivarCompra(this.ordemCompra).subscribe((idPedido: number) => {
+      this.idPedido = idPedido;
+    });
   }
 }
