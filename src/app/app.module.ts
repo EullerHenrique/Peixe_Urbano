@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TopComponent } from './top/top.component';
@@ -38,11 +39,12 @@ import { OrdemCompraSucessoComponent } from './ordem-compra/ordem-compra-sucesso
   [ 
     BrowserModule, 
     HttpModule,
+    FormsModule,
     RouterModule.forRoot(ROUTES) //forRoot -> As rotas são disponibilizadas globalmente 
   ],
   providers: 
   [
-    { provide: LOCALE_ID, useValue: 'pt-Br'}
+    { provide: LOCALE_ID, useValue: 'pt-Br'} // Ajuste necessário para o pipe DescricaoReduzida funcionar
   ],
   bootstrap:
   [ 

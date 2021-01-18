@@ -795,10 +795,12 @@ Services (serviços)
       
       Forms
       
-        1) Two-way binding
-        2) Template Forms
+        1) Two-way binding -> Atributos da classe controlam o estado do formulário e dos campos do formulário via databinding
+
+        2) Template Forms - > O angular cria um objeto que representa o estado do formulário e dos campos do formuláro do DOM
+        
         3) Reactive Forms
 
-        Novalidate (impede a validação de formulários pelo navegador)
+       
 
 
