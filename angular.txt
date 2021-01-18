@@ -206,11 +206,17 @@ Componente
 
       One-Way-Binding
 
-        Component -> Template HTML = Property binding (ligação de propriedade) => [property] = "data"
-                                     String interpolation (interpolação de string) => {{data}}
-        Template HTML -> Component = Event binding  (ligação de evento)=> (event) = "expression"
+        Component -> Template HTML = 
+                                      Property binding (ligação de propriedade)  => [property] = "data"
+ 
+                                      String interpolation (interpolação de string) => {{data}}
 
-      Two-way-Binding
+        Template HTML -> Component = 
+                                      
+                                      Event binding  (ligação de evento)=> (event) = "expression"
+
+      Two-way-Binding 
+      
         Component <--> Template Html
 
    Comunicação entre componentes (de pai para filho ou de filho para pai)
