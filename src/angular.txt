@@ -575,7 +575,7 @@ Services (serviços)
       
       Observables
 
-        map -> O operador Map aplica uma função de sua escolha a cada item      emitido pela fonte Observable e retorna um Observable com os           resultados dessas aplicações.
+        map -> O operador Map aplica uma função de sua escolha a cada item emitido pela fonte Observable e retorna um Observable com os resultados dessas aplicações.
         
         Transforma os itens emitidos por um Observable ao aplicar uma função a cada item
 
