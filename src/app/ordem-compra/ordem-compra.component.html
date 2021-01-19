@@ -2,7 +2,7 @@
 
 	<div class="ordem-compra">
 	
-  	<form class="mt-5 mb-5" novalidate> //  Novalidate (impede a validação de formulários pelo navegador)
+  	<form [formGroup]="form" class="mt-5 mb-5" novalidate> //  Novalidate (impede a validação de formulários pelo navegador)
 
 			<h5 class="text-center">Sua Compra</h5>
 			<hr>
@@ -41,10 +41,7 @@
               class="form-control"
               placeholder="Endereço" 
               autocomplete="off" 
-              minlength="5" 
-              required
-              name="endereco"
-              ngModel
+              formControlName="endereco"
             >
         
   
@@ -69,10 +66,7 @@
               class="form-control" 
               placeholder="Número" 
               autocomplete="off" 
-              minlength="1" 
-              required
-              name="numero"
-              ngModel
+              formControlName="numero"
             >
            
           <div class="valid-feedback">
@@ -96,8 +90,7 @@
               class="form-control"
               placeholder="Complemento" 
               autocomplete="off"
-              name="complemento"
-              ngModel
+              formControlName="complemento"
         >
 
 
@@ -120,8 +113,7 @@
 				<div class="form-group col-md-3">
 					
           <select class="form-control"
-                  name="formaDePagamento"
-                  ngModel
+                  formControlName="formaDePagamento"
           >
     
             <option value="">Selecione uma opção</option>
