@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TopComponent } from './top/top.component';
@@ -39,7 +39,7 @@ import { OrdemCompraSucessoComponent } from './ordem-compra/ordem-compra-sucesso
   [ 
     BrowserModule, 
     HttpModule,
-    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(ROUTES) //forRoot -> As rotas são disponibilizadas globalmente 
   ],
   providers: 
