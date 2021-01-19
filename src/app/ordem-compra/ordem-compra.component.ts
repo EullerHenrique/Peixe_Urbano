@@ -22,5 +22,9 @@ export class OrdemCompraComponent implements OnInit {
 
   ngOnInit() {}
 
+  public confirmarCompra():void{
+    console.log(this.form);
+  }
+
 
 }

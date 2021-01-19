@@ -2,7 +2,7 @@
 
 	<div class="ordem-compra">
 	
-  	<form [formGroup]="form" class="mt-5 mb-5" novalidate> //  Novalidate (impede a validação de formulários pelo navegador)
+  	<form [formGroup]="form" class="mt-5 mb-5" novalidate (ngSubmit)="confirmarCompra()"> <!--  Novalidate (impede a validação de formulários pelo navegador) -->
 
 			<h5 class="text-center">Sua Compra</h5>
 			<hr>
@@ -143,10 +143,8 @@
 		
       <div class="text-center">
         <button 
-          type="button" 
+          type="submit" 
           class="btn btn-primary btn-lg shadow-none rounded-pill" 
-          [disabled] = "formEstado" 
-          (click)="confirmarCompra()"
         >Cofirmar compra</button>
       </div>
           
