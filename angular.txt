@@ -216,7 +216,7 @@ Componente
                                       Event binding  (ligação de evento)=> (event) = "expression"
 
       Two-way-Binding 
-      
+
         Component <--> Template Html
 
    Comunicação entre componentes (de pai para filho ou de filho para pai)
@@ -803,9 +803,23 @@ Services (serviços)
       
         1) Two-way binding -> Atributos da classe controlam o estado do formulário e dos campos do formulário via databinding
 
-        2) Template Forms - > O angular cria um objeto que representa o estado do formulário e dos campos do formuláro do DOM
-        
-        3) Reactive Forms
+        2) Template Forms - > O angular cria um objeto que representa o estado  do formulário e dos campos do formuláro do DOM
+                          - > Validação dos campos feita através de atributos dos próprios elementos HTML definidos no Template 
+    
+        *FormsModule - > ngForm - > ngModel 
+                                - > ngModel
+                                - > ngModel
+                      - > Sicroniza com a classe do componente
+
+        3) Reactive Forms - > O angular cria o formulário de modo programático e faz a sincronização do mesmo com o DOM 
+                          - > Validação dos campos feita através da Classe do componente utilizando TS
+
+        *ReactiveFormsModule - > formGroup - > formControl ... formControlName
+                                           - > formControl ... formControlName
+                                           - > formControl ... formControlName
+                              - > Sincroniza com o o template do componente 
+      
+
 
        
 
