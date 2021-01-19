@@ -818,6 +818,11 @@ Services (serviços)
                                            - > formControl ... formControlName
                                            - > formControl ... formControlName
                               - > Sincroniza com o o template do componente 
+
+                              //FormControl aceita 3 parâmetros opcionais  
+                                  1) Valor inicial do campo
+                                  2) Array de validadores
+                                  3) Array de validadores assicronos
       
 
 
