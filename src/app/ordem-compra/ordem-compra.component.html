@@ -16,7 +16,7 @@
               <div class="card-body">
                 <p class="card-text">{{ item.empresa }}</p>
                 <h4 class="card-title text-center">{{ item.produto}}</h4>
-                <p class="preco d-flex justify-content-end">{{ item.valor | currency: 'BRL': true}}</p>
+                <p class="preco d-flex justify-content-end">{{ item.qtd * item.valor | currency: 'BRL': true}}</p>
               	<button type="button " class="btn btn-link shadow-none ">-</button>
 							  {{ item.qtd }}
 							  <button type="button" class="btn btn-link shadow-none">+</button>

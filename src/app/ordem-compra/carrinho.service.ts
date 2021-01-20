@@ -22,7 +22,17 @@ export class CarrinhoService{
         1    
     )
 
-    this.itens.push(itemCarrinho);
+    //Verifica se o item em questão já existe dentro de this.itens
+    //obs: A função find percorre o array itens 
+
+    let itemCarrinhoEncontrado = this.itens.find((item: ItemCarrinho)=> item.id === itemCarrinho.id
+    )
+    if(itemCarrinhoEncontrado){
+      itemCarrinhoEncontrado.qtd += 1; 
+    }else{
+      this.itens.push(itemCarrinho);
+
+    }
 
   }
 
