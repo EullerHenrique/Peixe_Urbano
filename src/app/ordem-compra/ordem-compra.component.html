@@ -2,7 +2,7 @@
 
 	<div class="ordem-compra">
 	
-  	<form [formGroup]="form" class="mt-5 mb-5" novalidate (ngSubmit)="confirmarCompra()"> <!--  Novalidate (impede a validação de formulários pelo navegador) -->
+  	<form [formGroup]="form" class="mt-5 mb-5" novalidate (ngSubmit)="confirmarCompra()" *ngIf="idOrdemCompra === undefined"> <!--  Novalidate (impede a validação de formulários pelo navegador) -->
 
 			<h5 class="text-center">Sua Compra</h5>
 			<hr>
@@ -91,9 +91,9 @@
                   formControlName="formaDePagamento"
           >
     
-            <option value="">Selecione uma opção</option>
-            <option value="dinheiro" selected="{{ formaDePagamento == 'dinheiro'?'selected':''}}">Dinheiro</option>
-            <option value="debito" selected="{{ formaDePagamento == 'debito'?'selected':''}}">Débito</option>
+            <option [ngValue]="null" selected>Selecione uma opção</option>
+            <option value="dinheiro" >Dinheiro</option>
+            <option value="debito">Débito</option>
          
           </select>
 
@@ -120,9 +120,9 @@
 	
   </div>
 
-  <div class="ordem-compra" *ngIf="idPedido !== undefined">
+  <div class="ordem-compra" *ngIf="idOrdemCompra !== undefined">
 
-    <app-ordem-compra-sucesso [idPedido]="idPedido"></app-ordem-compra-sucesso> 
+    <app-ordem-compra-sucesso [idOrdemCompra]="idOrdemCompra"></app-ordem-compra-sucesso> 
 
   </div>
 
