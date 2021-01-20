@@ -1,4 +1,4 @@
-export class OrdemCompra{
+export class Pedido{
 
   constructor(
     public endereco: string,

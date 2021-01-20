@@ -1,4 +1,4 @@
-import { OrdemCompra } from './ordem-compra.model';
+import { Pedido } from './pedido.model';
 import { Http, RequestOptions, Headers, Response } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
@@ -10,14 +10,14 @@ export class OrdemCompraService{
 
   constructor(private http: Http){}
 
-  public efetivarCompra(ordemCompra:OrdemCompra): Observable<number>{
+  public efetivarCompra(pedido:Pedido): Observable<number>{
 
     let headers: Headers = new Headers();
     headers.append('Content-type','application/json'); //append = acrescentar
 
     return this.http.post(
       `${URL_API_PEDIDOS}`,
-      JSON.stringify(ordemCompra), // stringify = objeto literal -> string JSON
+      JSON.stringify(pedido), // stringify = objeto literal -> string JSON
       new RequestOptions( { 
         headers: headers
       })

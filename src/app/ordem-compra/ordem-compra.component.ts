@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { OrdemCompraService } from "./ordem-compra.service";
-import { OrdemCompra } from "./ordem-compra.model";
+import { OrdemCompraService } from "./pedido.service";
+import { Pedido } from "./pedido.model";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 
 @Component({
@@ -20,22 +20,22 @@ export class OrdemCompraComponent implements OnInit {
 
   constructor(private ordemCompraService: OrdemCompraService) {}
 
-  private idOrdemCompra: number;
+  private idPedido: number;
 
   ngOnInit() {}
 
   public confirmarCompra():void{
 
-    let ordemCompra: OrdemCompra = new OrdemCompra(
-                        this.form.value.endereco, 
-                        this.form.value.numero,
-                        this.form.value.complemento,
-                        this.form.value.formaDePagamento
+    let pedido: Pedido = new Pedido(
+                              this.form.value.endereco, 
+                              this.form.value.numero,
+                              this.form.value.complemento,
+                              this.form.value.formaDePagamento
     );
 
-    this.ordemCompraService.efetivarCompra(ordemCompra).subscribe( 
-    (idOrdemCompra: number) => {
-        this.idOrdemCompra = idOrdemCompra;
+    this.ordemCompraService.efetivarCompra(pedido).subscribe( 
+    (idPedido: number) => {
+        this.idPedido = idPedido;
     })
 
    }
