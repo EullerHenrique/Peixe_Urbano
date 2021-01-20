@@ -5,7 +5,7 @@ export class CarrinhoService{
 
   private itens: ItemCarrinho[] = [];
 
-  public exibirItem(): ItemCarrinho[]{
+  public exibirItens(): ItemCarrinho[]{
     
     return this.itens;
 

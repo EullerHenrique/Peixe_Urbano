@@ -9,21 +9,22 @@
 
       <div class="row justify-content-center">
       
-        <div class="col-8 col-md-4">
+        <div class="col-8 col-md-4" *ngFor="let item of itensCarrinho" >
           <a>
             <div class="card mt-3 mb-3">
-              <img class="card-img-top" src="https://user-images.githubusercontent.com/48317736/88994592-2041ef80-d2bf-11ea-9ba2-27f0e29ae76d.png">
+              <img class="card-img-top" [src]="item.img.url">
               <div class="card-body">
-                <p class="card-text">Burguer King</p>
-                <h4 class="card-title text-center">Whopper</h4>
-                <p class="preco d-flex justify-content-end">R$ 30,00</p>
+                <p class="card-text">{{ item.empresa }}</p>
+                <h4 class="card-title text-center">{{ item.produto}}</h4>
+                <p class="preco d-flex justify-content-end">{{ item.valor | currency: 'BRL': true}}</p>
               	<button type="button " class="btn btn-link shadow-none ">-</button>
-							  1
+							  {{ item.qtd }}
 							  <button type="button" class="btn btn-link shadow-none">+</button>
               </div>
             </div>
           </a>
         </div>
+
       </div>
  
 
