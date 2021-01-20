@@ -43,19 +43,10 @@
               autocomplete="off" 
               formControlName="endereco"
             >
-        
-  
-          <div class="valid-feedback">
-
-            <small class="form-text text-success">Endereço válido</small>
-
-          </div>
-
-          <div class="invalid-feedback">
-        
-            <small class="form-text text-danger">Endereço inválido</small>
-        
-          </div>
+      
+            <small *ngIf="form.get('endereco').valid && form.get('endereco').touched" class="form-text text-success">Endereço válido</small>
+            <small *ngIf="form.get('endereco').invalid && form.get('endereco').touched" class="form-text text-danger">Endereço inválido</small>
+     
         
         </div>
 
@@ -66,20 +57,11 @@
               class="form-control" 
               placeholder="Número" 
               autocomplete="off" 
-              formControlName="numero"
-            >
+              formControlName="numero">
            
-          <div class="valid-feedback">
 
-            <small class="form-text text-success">Número válido</small>
-
-          </div>
-
-          <div class="invalid-feedback">
-        
-            <small class="form-text text-danger">Número inválido</small>
-        
-          </div>
+            <small  *ngIf="form.get('numero').valid && form.get('numero').touched" class="form-text text-success">Número válido</small>
+            <small  *ngIf="form.get('numero').invalid && form.get('numero').touched" class="form-text text-danger">Número inválido</small>
 
         </div>
 
@@ -90,20 +72,13 @@
               class="form-control"
               placeholder="Complemento" 
               autocomplete="off"
-              formControlName="complemento"
-        >
+              formControlName="complemento">
 
+            <small  *ngIf="form.get('complemento').valid && form.get('complemento').touched" class="form-text text-success">Complemento válido</small>
 
-          <div class="valid-feedback">
-
-            <small class="form-text text-success">Complemento válido</small>
-
-          </div>
-
-        </div>
-
-			</div>
+			  </div>
 							
+       </div>       
 
 			<h5 class="text-center">Dados de pagamento</h5>
 			<hr>
@@ -123,17 +98,9 @@
           </select>
 
 
-          <div class="valid-feedback">
-
-            <small class="form-text text-success">Forma de pagamento válida</small>
-
-          </div>
-
-          <div class="invalid-feedback">
+            <small  *ngIf="form.get('formaDePagamento').valid && form.get('formaDePagamento').touched" class="form-text text-success">Forma de pagamento válida</small>
+            <small  *ngIf="form.get('formaDePagamento').invalid && form.get('formaDePagamento').touched" class="form-text text-danger">Selecione uma forma de pagamento</small>
         
-            <small class="form-text text-danger">Selecione uma forma de pagamento</small>
-        
-          </div>
 				
         </div>
 		
@@ -145,6 +112,7 @@
         <button 
           type="submit" 
           class="btn btn-primary btn-lg shadow-none rounded-pill" 
+          [disabled]="!formulario.valid"
         >Cofirmar compra</button>
       </div>
           
