@@ -35,19 +35,19 @@ export class OrdemCompraComponent implements OnInit {
 
   public confirmarCompra():void{
 
-    let pedido: Pedido = new Pedido(
-                              this.form.value.endereco, 
-                              this.form.value.numero,
-                              this.form.value.complemento,
-                              this.form.value.formaDePagamento
-    );
+      let pedido: Pedido = new Pedido(
+                                this.form.value.endereco, 
+                                this.form.value.numero,
+                                this.form.value.complemento,
+                                this.form.value.formaDePagamento
+      );
 
-    this.ordemCompraService.efetivarCompra(pedido).subscribe( 
-    (idPedido: number) => {
+      this.ordemCompraService.efetivarCompra(pedido).subscribe( 
+      (idPedido: number) => {
         this.idPedido = idPedido;
-    })
-
-   }
+      })
+  
+  }
 
 
 }
