@@ -25,15 +25,14 @@ h5 {
 
 
 .bannerHome{
-  background-image: url('https://user-images.githubusercontent.com/48317736/88993258-c855b980-d2bb-11ea-881c-a775c3f7b8be.jpg');
 }
 
 .bannerRestaurante{
-
+    background-image: url('https://user-images.githubusercontent.com/48317736/88993258-c855b980-d2bb-11ea-881c-a775c3f7b8be.jpg');
 }
 
 .bannerDiversao{
-
+   background-image: url('https://user-images.githubusercontent.com/48317736/105398617-52466580-5c01-11eb-9b99-c4a5ef285072.jpg');
 }
 
 .bannerOrdemCompra{
