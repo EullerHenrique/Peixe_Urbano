@@ -64,6 +64,12 @@ export class CarrinhoService{
 
   if(itemCarrinhoEncontrado){
     itemCarrinhoEncontrado.qtd -= 1;
+
+    if(itemCarrinhoEncontrado.qtd === 0){
+     
+      this.itens.splice(this.itens.indexOf(itemCarrinhoEncontrado) ,1)
+    
+    }
   }
 
 }
