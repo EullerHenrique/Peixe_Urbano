@@ -17,9 +17,9 @@
                 <p class="card-text">{{ item.empresa }}</p>
                 <h4 class="card-title text-center">{{ item.produto}}</h4>
                 <p class="preco d-flex justify-content-end">{{ item.qtd * item.valor | currency: 'BRL': true}}</p>
-              	<button type="button " class="btn btn-link shadow-none ">-</button>
+              	<button type="button" (click)="carrinhoService.subQtd(item)" class="btn btn-link shadow-none ">-</button>
 							  {{ item.qtd }}
-							  <button type="button" class="btn btn-link shadow-none">+</button>
+							  <button type="button" (click)="carrinhoService.addQtd(item)" class="btn btn-link shadow-none">+</button>
               </div>
             </div>
           </a>
@@ -28,7 +28,7 @@
       </div>
  
 
-      <h4 class="mt-4 text-center">Total do pedido: 61.80</h4>
+      <h4 class="mt-4 text-center">Total do pedido: {{ carrinhoService.totalCarrinhoCompras() | currency: 'BRL': true}}</h4>
 				
 			<h5 class="mt-5 text-center">Dados de entrega</h5>
 			<hr>

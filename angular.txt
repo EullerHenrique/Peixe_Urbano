@@ -585,6 +585,8 @@ Services (serviços)
         
         Transforma os itens emitidos por um Observable ao aplicar uma função a cada item
 
+        https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+
         retry(n: number) -> Faz n requisições ao servidor até o código de requisição feita com sucesso ser recebido
                  
 

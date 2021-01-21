@@ -23,7 +23,7 @@ export class CarrinhoService{
     )
 
     //Verifica se o item em questão já existe dentro de this.itens
-    //obs: A função find percorre o array itens 
+    //obs: A função find percorre o array itens em busca do item em questão
 
     let itemCarrinhoEncontrado = this.itens.find((item: ItemCarrinho)=> item.id === itemCarrinho.id
     )
@@ -35,5 +35,37 @@ export class CarrinhoService{
     }
 
   }
+
+  public totalCarrinhoCompras(): number{
+
+   let total: number = 0;
+
+   this.itens.map((item: ItemCarrinho)=> {
+    total = total + (item.valor * item.qtd);
+   })
+
+   return total;
+
+  }
+
+  public addQtd(itemCarrinho: ItemCarrinho): void {
+   
+  let itemCarrinhoEncontrado = this.itens.find((item: ItemCarrinho)=> item.id === itemCarrinho.id);
+
+  if(itemCarrinhoEncontrado){
+    itemCarrinhoEncontrado.qtd += 1;
+  }
+  
+}
+
+  public subQtd(itemCarrinho: ItemCarrinho): void {
+   
+  let itemCarrinhoEncontrado = this.itens.find((item: ItemCarrinho)=> item.id === itemCarrinho.id);
+
+  if(itemCarrinhoEncontrado){
+    itemCarrinhoEncontrado.qtd -= 1;
+  }
+
+}
 
 }
