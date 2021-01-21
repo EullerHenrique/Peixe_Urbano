@@ -1,35 +1,46 @@
 <div class="container">
 
-	<div class="ordem-compra">
-	
-  	<form [formGroup]="form" class="mt-5 mb-5" novalidate (ngSubmit)="confirmarCompra()" *ngIf="idOrdemCompra === undefined"> <!--  Novalidate (impede a validação de formulários pelo navegador) -->
+    <div class="ordem-compra">
+    
+      <form [formGroup]="form" class="mt-5 mb-5" novalidate (ngSubmit)="confirmarCompra()" *ngIf="idOrdemCompra === undefined"> <!--  Novalidate (impede a validação de formulários pelo navegador) -->
 
-			<h5 class="text-center">Sua Compra</h5>
-			<hr>
+        <h5 class="text-center">Sua Compra</h5>
+        <hr>
 
-      <div class="row justify-content-center">
-      
-        <div class="col-8 col-md-4" *ngFor="let item of itensCarrinho" >
-          <a>
-            <div class="card mt-3 mb-3">
-              <img class="card-img-top" [src]="item.img.url">
-              <div class="card-body">
-                <p class="card-text">{{ item.empresa }}</p>
-                <h4 class="card-title text-center">{{ item.produto}}</h4>
-                <p class="preco d-flex justify-content-end">{{ item.qtd * item.valor | currency: 'BRL': true}}</p>
-              	<button type="button" (click)="carrinhoService.subQtd(item)" class="btn btn-link shadow-none ">-</button>
-							  {{ item.qtd }}
-							  <button type="button" (click)="carrinhoService.addQtd(item)" class="btn btn-link shadow-none">+</button>
+      <div *ngIf="carrinhoService.exibirItens().length; else carrinhoVazio">
+        
+        <div class="form-row justify-content-center">
+        
+          <div class="col-8 col-md-4" *ngFor="let item of itensCarrinho" >
+            <a>
+              <div class="card mt-3 mb-3">
+                <img class="card-img-top" [src]="item.img.url">
+                <div class="card-body">
+                  <p class="card-text">{{ item.empresa }}</p>
+                  <h4 class="card-title text-center">{{ item.produto}}</h4>
+                  <p class="preco d-flex justify-content-end">{{ item.qtd * item.valor | currency: 'BRL': true}}</p>
+                  <button type="button" (click)="carrinhoService.subQtd(item)" class="btn btn-link shadow-none ">-</button>
+                  {{ item.qtd }}
+                  <button type="button" (click)="carrinhoService.addQtd(item)" class="btn btn-link shadow-none">+</button>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
+
         </div>
+  
 
+        <h4 class="mt-4 text-center">Total do pedido: {{ carrinhoService.totalCarrinhoCompras() | currency: 'BRL': true}}</h4>
+          
       </div>
- 
 
-      <h4 class="mt-4 text-center">Total do pedido: {{ carrinhoService.totalCarrinhoCompras() | currency: 'BRL': true}}</h4>
-				
+      <ng-template #carrinhoVazio>
+
+        <div class="mt-5 text-center">
+          Seu carrinho está vazio! Não perca tempo, aproveite as ofertas.
+        </div>
+      
+      </ng-template>
 			<h5 class="mt-5 text-center">Dados de entrega</h5>
 			<hr>
 
