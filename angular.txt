@@ -827,7 +827,14 @@ Services (serviços)
                                   3) Array de validadores assicronos
       
 
+API FAKE ONLINE
 
-       
+Instruções
+
+  https://my-json-server.typicode.com/
+
+API FAKE ONLINE DO PROJETO PEIXE URBANO
+  
+  https://my-json-server.typicode.com/EullerHenrique/Peixe_Urbano
 
 
