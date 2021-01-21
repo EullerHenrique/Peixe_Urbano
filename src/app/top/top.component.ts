@@ -37,6 +37,7 @@ export class TopComponent implements OnInit {
                           console.log(err);
                           return Observable.of<Oferta[]>([]);
                        });
+
   }
 
   public pesquisa(termoDaPesquisa: string): void{
@@ -55,5 +56,7 @@ export class TopComponent implements OnInit {
     this.subjectPesquisa.next('');
     
   }
+
+  
 
 }

@@ -24,6 +24,47 @@ h5 {
 }
 
 
+.bannerHome{
+  background-image: url('https://user-images.githubusercontent.com/48317736/88993258-c855b980-d2bb-11ea-881c-a775c3f7b8be.jpg');
+}
+
+.bannerRestaurante{
+
+}
+
+.bannerDiversao{
+
+}
+
+.bannerOrdemCompra{
+
+}
+
+.banner{
+  background-size: 100% 400px;
+  background-position: center;
+
+  height: 140px;
+  
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  color: white;
+  margin-bottom: 0px;  
+  text-shadow: 1px 1px black;
+}
+
+.title{
+  font-size: 29px; 
+  margin-bottom: 0;
+}
+
+.sub-title{
+  font-size: 19px; 
+  margin-bottom: 0;
+}
+
+
 
 
 
