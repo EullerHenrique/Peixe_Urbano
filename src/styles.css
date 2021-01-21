@@ -35,20 +35,19 @@ h5 {
 
 .bannerDiversao{
    background-image: url('https://user-images.githubusercontent.com/48317736/105398617-52466580-5c01-11eb-9b99-c4a5ef285072.jpg');
-   background-position: 0px -120px;
+   background-position: 0px -188px;
 
 }
 
 .bannerOrdemCompra{
 
-  background-image: url('ecommerce-3546296](https://user-images.githubusercontent.com/48317736/105401792-54aabe80-5c05-11eb-90bb-ed0e70d63b0c.jpg');
-    background-position: center;
+  background-image: url('https://user-images.githubusercontent.com/48317736/105401792-54aabe80-5c05-11eb-90bb-ed0e70d63b0c.jpg');
+  background-position: center;
 
 }
 
 .banner{
   background-size: 100% 400px;
-  background-position: center;
 
   height: 140px;
   
