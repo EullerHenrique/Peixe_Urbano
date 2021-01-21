@@ -29,13 +29,20 @@ h5 {
 
 .bannerRestaurante{
     background-image: url('https://user-images.githubusercontent.com/48317736/88993258-c855b980-d2bb-11ea-881c-a775c3f7b8be.jpg');
+      background-position: center;
+
 }
 
 .bannerDiversao{
    background-image: url('https://user-images.githubusercontent.com/48317736/105398617-52466580-5c01-11eb-9b99-c4a5ef285072.jpg');
+   background-position: 0px -120px;
+
 }
 
 .bannerOrdemCompra{
+
+  background-image: url('ecommerce-3546296](https://user-images.githubusercontent.com/48317736/105401792-54aabe80-5c05-11eb-90bb-ed0e70d63b0c.jpg');
+    background-position: center;
 
 }
 
