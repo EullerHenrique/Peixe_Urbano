@@ -1,3 +1,57 @@
+TypeScript (tsc)
+
+Você já ouviu falar sobre TypeScript? Trata-se de uma ferramenta que permite escrever um código, fazendo programações
+orientadas a objetos sem perder suas vantagens. Ao compilar um código TypeScript, é gerado um código JavaScript,
+e esse código é o que será executado no browser (navegador).
+
+Entre os principais elementos básicos que tornam essa construção muito importante, podemos citar templates, componentes,
+roteamento, diretivas, módulos, serviços, injeção de dependências e ferramentas de infraestrutura. Se você quer entender
+um pouco mais sobre esse tema, continue a leitura e saiba mais!
+
+O que é TypeScript?
+
+Se você está se perguntando o que é TypeScript, ele é um conjunto da linguagem JavaScript, fornecendo classes, interfaces
+e tipagem estática opcional. Uma das maiores vantagens da TypeScript é possibilitar que os IDEs proporcionem um ambiente
+mais seguro, ao apontar erros enquanto o código é digitado pelo usuário.
+
+A linguagem TypeScript adiciona tipagem estática ao JavaScript, que, originalmente, possui tipagem dinâmica (as funções e variáveis conseguem assumir tipos diferentes ao longo do tempo de execução.)
+
+O código TypeScript é utilizado somente em ambiente de desenvolvimento, sendo convertido para JavaScript no processo de
+construção, já que somente este último código é lido pelos navegadores.
+
+TypeScript vs. JavaScript
+Por mais que se pareça muito com uma linguagem de programação, é mais apropriado dizer que o TypeScript se define como
+um conjunto de funcionalidades adicionadas ao JavaScript.
+
+Ou seja, partindo desse princípio, o TypeScript gira em torno dos upgrades da ECMAScript, que tem como foco o JavaScript.
+É a partir daí que suas funcionalidades ganham “corpo” para serem montadas.
+
+Assim, em um projeto no qual o JavaScript será muito utilizado, contar com o TypeScript pode trazer um ganho significativo
+de produtividade e resultar em um produto mais robusto.
+
+Em resumo, o TypeScript faz a verificação de erros durante a compilação (incompatibilidade de tipos, por exemplo), permitindo gerar JavaScript para diferentes
+versões do ECMAScript, sem que o usuário passe por grandes preocupações e dores de cabeça.
+
+Vantagens do TypeScript
+
+A grande sacada em utilizar o TypeScript é a possibilidade de ter erros sinalizados no processo de desenvolvimento,
+incrementando a inteligência da IDE que é utilizada.
+
+O TypeScript não ajuda somente no ambiente de desenvolvimento, mas também permite usar funcionalidades da linguagem que
+ainda não estão disponíveis de forma nativa.
+
+Outro tópico interessante é a possibilidade de transpilar o código, para que ele seja lido por todas as versões de
+browsers, assim como acontece com o Babel em aplicações totalmente JavaScript.
+
+Frameworks mais avançados como o Angularjs 4, o Ionic 3, utilizam o Typescript em seu código.
+
+Estilo de tipagem: Estática, forte, inferida
+
+Como instalar?
+
+npm install -g typescript
+
+
 Angular
 
 Basicamente o AngularJS é um framework de código aberto usado para construir aplicativos para web baseados em uma única página dinâmica
