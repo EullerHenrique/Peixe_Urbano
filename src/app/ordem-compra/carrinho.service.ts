@@ -74,6 +74,12 @@ export class CarrinhoService{
 
 }
 
+public getQtd(): number{
+
+  return this.itens.length;
+
+}
+
 public limparCarrinho(): void{
 
   this.itens = [];

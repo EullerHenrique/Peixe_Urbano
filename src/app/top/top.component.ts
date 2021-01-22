@@ -4,6 +4,7 @@ import { Subject } from 'rxjs/Subject';
 import '../app.rxjs-extensions'
 import { OfertasService } from '../oferta/oferta.service';
 import { Oferta } from '../oferta/oferta.model';
+import { CarrinhoService } from '../ordem-compra/carrinho.service';
 
 @Component({
   selector: 'peixe-urbano-top',
@@ -16,7 +17,7 @@ export class TopComponent implements OnInit {
   private ofertas: Observable<Oferta[]>;
   private subjectPesquisa: Subject<string> = new Subject<string>();
 
-  constructor(private OfertasService: OfertasService) { }
+  constructor(private OfertasService: OfertasService, private CarrinhoService: CarrinhoService) { }
 
   ngOnInit() {
 
@@ -56,6 +57,13 @@ export class TopComponent implements OnInit {
     this.subjectPesquisa.next('');
     
   }
+
+  public getQtd(): number{
+
+    return this.CarrinhoService.getQtd();
+  
+  }
+
 
   
 
