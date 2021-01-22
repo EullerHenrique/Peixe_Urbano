@@ -83,7 +83,6 @@ export class OfertasService{
       .map( (ofertas: Response) => {
         return ofertas.json();
       })
-  
   }
 
 

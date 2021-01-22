@@ -32,7 +32,7 @@
 					<li class="list-group-item rounded-pill mt-1" *ngFor="let oferta of ofertas | async">
 
 						<a [routerLink]="['/oferta', oferta.id]" (click)="limpaPesquisa()">
-							{{ oferta.produto | DescricaoReduzida: 50}}
+							{{ oferta.produto + " - " + oferta.empresa | DescricaoReduzida: 50}}
 						</a>
 
 					</li>
