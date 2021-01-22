@@ -892,3 +892,51 @@ API FAKE ONLINE DO PROJETO PEIXE URBANO
   https://my-json-server.typicode.com/EullerHenrique/Peixe_Urbano
 
 
+JUST-IN-TIME-COMPILATION (Compilação na hora certa)
+  
+    |
+    V
+  
+  DESENVOLVIMENTO
+  
+    |
+    V
+
+  BUILD (Produção) (Um compilador é anexado no chunck vendor)
+
+    |
+    V
+
+  BROWSER CARREGA APLICAÇÃO
+
+     |
+     V
+
+  ANGULAR ANALISA E COMPILA TEMPLATES
+
+Comando: ng build --prod --aot=false
+
+
+AHEAD-IN-TIME-COMPILATION (Compilação à frente no tempo)
+
+    |
+    V
+  
+  DESENVOLVIMENTO
+  
+    |
+    V
+
+   ANGULAR ANALISA E COMPILA TEMPLATES 
+
+    |
+    V
+
+  BUILD (Produção) (Como o código já foi compilado, o compilador não é anexado no chunck vendo. Com isso, o tamanho dos arquivos do projeto fica menor e o site fica mais rápido)
+
+    |
+    V
+
+  BROWSER CARREGA APLICAÇÃO
+
+  Comando: ng build --prod --aot=true
