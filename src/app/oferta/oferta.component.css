@@ -22,19 +22,6 @@ img {
     margin-right: 5px;
 }
 
-.secao {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.secao::after {
-  content: "";
-  display: block;
-  border-bottom: 2px solid #f60; 
-  width: 220px;
-  margin: auto ;
-}
-
 .btn-outline-primary{
       border-color: #006acb;
       color: #006acb;
