@@ -744,9 +744,6 @@ Services (serviços)
 
           Se a pesquisa atual for igual a anterior, a função switch map não será executada
 
-          Lembrete: Não funcionou, use pipes após aprender sobre pipes na seção 12
-
-
       Pipes
 
       Pipes são mecanismos de transformação de dados utilizados nos templates para prouzir uma representação customizada da informação a ser exibida.
