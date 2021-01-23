@@ -49,7 +49,7 @@
                 >
           
                 <small *ngIf="form.get('endereco').valid && form.get('endereco').touched" class="form-text text-success">Endereço válido</small>
-                <small *ngIf="form.get('endereco').invalid && form.get('endereco').touched" class="form-text text-danger">Endereço inválido</small>
+                <small *ngIf="form.get('endereco').invalid && form.get('endereco').touched" class="form-text text-danger">Digite o endereço</small>
         
             
             </div>
@@ -65,7 +65,7 @@
               
 
                 <small  *ngIf="form.get('numero').valid && form.get('numero').touched" class="form-text text-success">Número válido</small>
-                <small  *ngIf="form.get('numero').invalid && form.get('numero').touched" class="form-text text-danger">Número inválido</small>
+                <small  *ngIf="form.get('numero').invalid && form.get('numero').touched" class="form-text text-danger">Digite o número</small>
 
             </div>
 
@@ -98,6 +98,7 @@
                 <option [ngValue]="null" selected>Selecione uma opção</option>
                 <option value="dinheiro" >Dinheiro</option>
                 <option value="debito">Débito</option>
+                <option value="credito">Crédito</option>
             
               </select>
 

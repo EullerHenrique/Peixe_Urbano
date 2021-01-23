@@ -15,7 +15,7 @@ import { CarrinhoService } from "./carrinho.service";
 export class OrdemCompraComponent implements OnInit {
   
   public form: FormGroup = new FormGroup({
-    'endereco': new FormControl(null, [ Validators.required, Validators.minLength(3), Validators.maxLength(120)]),
+    'endereco': new FormControl(null, [ Validators.required, Validators.minLength(1)]),
     'numero': new FormControl(null, [ Validators.required, Validators.nullValidator]),
     'complemento': new FormControl(null),
     'formaDePagamento': new FormControl(null, [ Validators.required ]),
