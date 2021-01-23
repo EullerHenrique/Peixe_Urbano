@@ -15,7 +15,7 @@ export class DiversaoComponent implements OnInit {
 
   public ofertas: Oferta[];
 
-  constructor(private ofertasService: OfertasService){ }
+  constructor(public ofertasService: OfertasService){ }
 
   ngOnInit() {
 

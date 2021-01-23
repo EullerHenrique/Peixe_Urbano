@@ -7,8 +7,7 @@ import { URL_API_PEDIDOS } from '../app.api';
 @Injectable()
 export class OrdemCompraService{
 
-
-  constructor(private http: Http){}
+  constructor(public http: Http){}
 
   public efetivarCompra(pedido:Pedido): Observable<number>{
 

@@ -14,7 +14,7 @@ export class OndeFicaComponent implements OnInit {
 
   public onde_fica: string = '.';
 
-  constructor(private route: ActivatedRoute, private ofertasService: 
+  constructor(public route: ActivatedRoute, public ofertasService: 
   OfertasService) {  }
 
   ngOnInit() {

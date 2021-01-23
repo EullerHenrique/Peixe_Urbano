@@ -14,10 +14,10 @@ import { CarrinhoService } from '../ordem-compra/carrinho.service';
 })
 export class TopComponent implements OnInit {
 
-  private ofertas: Observable<Oferta[]>;
-  private subjectPesquisa: Subject<string> = new Subject<string>();
+  public ofertas: Observable<Oferta[]>;
+  public subjectPesquisa: Subject<string> = new Subject<string>();
 
-  constructor(private OfertasService: OfertasService, private CarrinhoService: CarrinhoService) { }
+  constructor(public OfertasService: OfertasService, public CarrinhoService: CarrinhoService) { }
 
   ngOnInit() {
 

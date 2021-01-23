@@ -14,18 +14,18 @@ import { CarrinhoService } from "./carrinho.service";
 
 export class OrdemCompraComponent implements OnInit {
   
-  private form: FormGroup = new FormGroup({
+  public form: FormGroup = new FormGroup({
     'endereco': new FormControl(null, [ Validators.required, Validators.minLength(3), Validators.maxLength(120)]),
     'numero': new FormControl(null, [ Validators.required, Validators.nullValidator]),
     'complemento': new FormControl(null),
     'formaDePagamento': new FormControl(null, [ Validators.required ]),
   });
 
-  constructor(private ordemCompraService: OrdemCompraService, 
-              private carrinhoService: CarrinhoService) {}
+  constructor(public ordemCompraService: OrdemCompraService, 
+              public carrinhoService: CarrinhoService) {}
 
-  private idPedido: number;
-  private itensCarrinho: ItemCarrinho[] = [];
+  public idPedido: number;
+  public itensCarrinho: ItemCarrinho[] = [];
 
   ngOnInit() {
 

@@ -13,7 +13,7 @@ import 'rxjs/add/operator/retry';
 @Injectable()
 export class OfertasService{
 
-  constructor(private http: Http){}
+  constructor(public http: Http){}
 
 
   public getOfertas(): Promise<Oferta[]>{

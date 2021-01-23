@@ -15,9 +15,9 @@ import 'rxjs/Rx';
 
 export class OfertaComponent implements OnInit, OnDestroy {
 
-  private oferta: Oferta;
+  public oferta: Oferta;
 
-  constructor(private route: ActivatedRoute, private ofertasService: OfertasService, private carrinhoService: CarrinhoService) {}
+  constructor(public route: ActivatedRoute, public ofertasService: OfertasService, public carrinhoService: CarrinhoService) {}
 
   ngOnInit() {
 

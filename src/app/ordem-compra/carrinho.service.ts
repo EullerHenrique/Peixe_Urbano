@@ -3,7 +3,7 @@ import { Oferta } from '../oferta/oferta.model';
 
 export class CarrinhoService{
 
-  private itens: ItemCarrinho[] = [];
+  public itens: ItemCarrinho[] = [];
 
   public exibirItens(): ItemCarrinho[]{
     
