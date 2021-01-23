@@ -23,7 +23,7 @@
           <img [src]="oferta.imagens[0].url">
         
           <div class="thumbnails">
-            
+
             <img *ngFor = "let imagem of oferta.imagens" [src]="imagem.url" class="mb-2">
         
           </div>
@@ -47,13 +47,13 @@
     
     </div>
 
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs mb-2">
 
           <li class="nav-item">
             <a class="nav-link active" routerLink="como-usar" data-toggle="tab">Como usar?</a>
           </li>
           <li class="nav-item">
-           <a class="nav-link active" routerLink="onde-fica" data-toggle="tab" href="#onde-fica">Onde fica?</a>
+           <a class="nav-link" routerLink="onde-fica" data-toggle="tab">Onde fica?</a>
           </li>
       
       </ul>
