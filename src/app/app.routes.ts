@@ -12,6 +12,7 @@ export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
   { path: 'restaurantes', component: RestaurantesComponent},
   { path: 'diversao', component: DiversaoComponent},
+  { path: 'home', component: HomeComponent},
   { path: 'oferta/:id', component: OfertaComponent,
    children:
    
