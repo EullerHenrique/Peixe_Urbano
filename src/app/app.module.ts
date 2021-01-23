@@ -10,7 +10,6 @@ import { CarrinhoService } from './ordem-compra/carrinho.service';
 import { AppComponent } from './app.component';
 import { TopComponent } from './top/top.component';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
 import { RestaurantesComponent } from './restaurantes/restaurantes.component';
 import { DiversaoComponent } from './diversao/diversao.component';
 import { OfertaComponent } from './oferta/oferta.component';
@@ -25,7 +24,6 @@ import { OrdemCompraSucessoComponent } from './ordem-compra/ordem-compra-sucesso
     AppComponent,
     TopComponent,
     HomeComponent,
-    FooterComponent,
     RestaurantesComponent,
     DiversaoComponent,
     OfertaComponent,
