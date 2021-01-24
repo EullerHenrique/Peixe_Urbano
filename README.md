@@ -16,7 +16,7 @@
   
 <img alt="GitHub" src="https://img.shields.io/github/license/EullerHenrique/Peixe_Urbano">
 
-<img src="http://img.shields.io/static/v1?label=status&message=development&color=YELLOW&style=plastic"/>
+<img src="http://img.shields.io/static/v1?label=status&message=concluded&color=GREEN&style=plastic"/>
  
 </p>
 
