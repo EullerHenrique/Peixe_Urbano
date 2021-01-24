@@ -41,7 +41,7 @@
 
 ## Página Online
 
-> https://peixe-urbano.stackblitz.io/    
+> https://eullerhenrique.github.io/Peixe_Urbano/
 
 ## Projeto Base
 
@@ -82,7 +82,6 @@
  - CSS
  - JAVASCRIPT MODERNO ES6 (ECMAScript 2016)
  - BOOTSTRAP 4
- - TETHER
  - NODE JS
  - TYPESCRIPT
  - ANGULAR 4
