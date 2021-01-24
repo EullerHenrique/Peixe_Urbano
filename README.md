@@ -52,16 +52,16 @@
 - [Curso de Desenvolvimento WEB com ES6, TypeScript e Angular](https://www.udemy.com/course/curso-de-desenvolvimento-web-com-es6-typescript-e-angular-4/)
   - Professor: [Jorge Sant Ana](https://www.udemy.com/user/jorgetadeusantanasilva/)
   - Seções: 
-  - - Seção 7: Primeiros passos
-  - - Seção 8: Serviços e Promises
-  - - Seção 9: Criando uma API Rest fake, injeção de dependências e HTTP Request
-  - - Seção 10: Rotas e Navegação
-  - - Seção 11: Observables
-  - - Seção 12: Pipes
-  - - Seção 13: Formulários
-  - - Seção 14: Formulários - Templates
-  - - Seção 15: Formulário - Reactive Forms
-  - - Seção 16: Implementando o carrinho de compras
+    - Seção 7: Primeiros passos
+    - Seção 8: Serviços e Promises
+    - Seção 9: Criando uma API Rest fake, injeção de dependências e HTTP Request
+    - Seção 10: Rotas e Navegação
+    - Seção 11: Observables
+    - Seção 12: Pipes
+    - Seção 13: Formulários
+    - Seção 14: Formulários - Templates
+    - Seção 15: Formulário - Reactive Forms
+    - Seção 16: Implementando o carrinho de compras
   
 
 
