@@ -26,7 +26,7 @@ export class TopComponent implements OnInit {
                        .debounceTime(1000)
                        .distinctUntilChanged()
                        .switchMap((termoDaPesquisa: string) => {
-                          console.log('requisicao http para api');
+                          //console.log('requisicao http para api');
 
                           if(termoDaPesquisa.trim() === ''){
                             return Observable.of<Oferta[]>([])
@@ -47,7 +47,7 @@ export class TopComponent implements OnInit {
     // Observer (observador)
     // Subject atuando na condição de observador
 
-    console.log('keyup caracter', termoDaPesquisa);
+    //console.log('keyup caracter', termoDaPesquisa);
     this.subjectPesquisa.next(termoDaPesquisa);
 
   }
