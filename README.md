@@ -96,19 +96,29 @@
 
 ## Layout
 
+### Home
 
-
----
-
-
+![eullerhenrique github io_Peixe_Urbano_ (1)](https://user-images.githubusercontent.com/48317736/105648561-dc552f00-5e8a-11eb-9c20-e17ea343275b.png)
 
 ---
 
+### Restaurantes
 
+![eullerhenrique github io_Peixe_Urbano_ (2)](https://user-images.githubusercontent.com/48317736/105648559-dbbc9880-5e8a-11eb-9b5d-c44b5f470a68.png)
+
+---
+
+### Diversão
+
+![eullerhenrique github io_Peixe_Urbano_ (3)](https://user-images.githubusercontent.com/48317736/105648557-da8b6b80-5e8a-11eb-9e78-726423984558.png)
 
 ---
   
+### Ordem De Compra  
 
+![eullerhenrique github io_Peixe_Urbano_ (4)](https://user-images.githubusercontent.com/48317736/105648556-d95a3e80-5e8a-11eb-853f-94a18d104776.png)
+
+---
    
 ## Licença 
 
