@@ -39,7 +39,7 @@ import { OrdemCompraSucessoComponent } from './ordem-compra/ordem-compra-sucesso
     BrowserModule, 
     HttpModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(ROUTES, {useHash: true}) 
+    RouterModule.forRoot(ROUTES) 
     //forRoot -> As rotas são disponibilizadas globalmente 
     //{useHash: true} -> Ajuste necessário para a página continuar funcionando ao dar um refresh na página
   ],
