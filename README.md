@@ -31,6 +31,18 @@
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 
 - [Layout](#layout)
+
+- [Pré-Requisitos](#pré-requisitos)
+
+- [Instalação e inserção do repositório em um projeto angular](#instalação-e-inserção-do-repositório-em-um-projeto-angular)
+
+- [Build e Deploy via Angular Cli](#build-e-deploy-via-angular-cli)
+
+- [Build via Angular Cli](#build-via-angular-cli)
+  
+  - [Deploy via servidor HTTP](#deploy-via-servidor-http)  
+  
+  - [Deploy via HTTP-server](#deploy-via-http-server)
    
 - [Licença](#licença)
   
@@ -125,6 +137,78 @@
 ![eullerhenrique github io_Peixe_Urbano_ (4)](https://user-images.githubusercontent.com/48317736/105648556-d95a3e80-5e8a-11eb-853f-94a18d104776.png)
 
 ---
+
+# Pré-Requisitos 
+
+  **1.** Instale o Node.js    
+  
+    sudo apt-get install nodejs    
+
+  **2.** Instale o npm    
+    
+    sudo apt-get install npm     
+  
+  **3.** Instale o Angular Cli 1.1.0 (Contém o Angular 4)
+    
+    sudo npm install @angular/cli@1.1.0 
+    
+    
+# Instalação e inserção do repositório em um projeto angular
+
+  **1.** Clone o repositório    
+  
+    git clone -b dev https://github.com/EullerHenrique/Peixe_Urbano.git
+        
+  **2.** Crie um projeto angular
+  
+    ng new nome-do-projeto     
+
+  **3.** Exclua a pasta src presente no diretório nome-do-projeto
+          
+    cd nome-projeto
+    rm -rf nome-projeto
+  
+  **4.** Insira a pasta src presente no diretório Duolingo no diretório nome-do-projeto  
+      
+    cd ..
+    cd Peixe_Urbano
+    mv src ../nome-projeto
+              
+              
+ # Build e Deploy via Angular Cli   
+ 
+  **1.** Entre na pasta nome-do-projeto, gere um build e um servidor local remoto 
+   
+    cd nome-do-projeto
+    
+    ng serve
+
+  **2.** Acesse em seu navegador o servidor gerado  
+  
+    localhost:4200 || 127.0.0.1:4200 (Somente o dispositivo atual pode acessar esse servidor) 
+      
+ # Deploy   
+    
+  ## Deploy via HTTP-server
+  
+   **1.** Instale o HTTP-server
+   
+    sudo npm install http-server -g
+    
+   **2.** Entre na pasta dist e gere um servidor   
+   
+    cd dist
+    
+    http-server
+ 
+   **3.** Acesse em seu navegador o servidor gerado  
+ 
+    localhost:8080 || 127.0.0.1:8080 (Somente o dispositivo atual pode acessar esse servidor)  
+
+    ou  
+
+    ip_do_roteador:8080 (Qualquer dispositivo pode acessar esse servidor)    
+        
    
 ## Licença 
 
