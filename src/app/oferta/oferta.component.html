@@ -23,11 +23,9 @@
           <img [src]="oferta.imagens[0].url">
         
           <div class="thumbnails">
-        
-        
-            <img *ngFor = "let imagem of oferta.imagens | slice: 1; " [src]="imagem.url" class="mb-2">
-                
 
+            <img *ngFor = "let imagem of oferta.imagens | slice:1;" [src]="imagem.url" class="mb-2">
+        
           </div>
           
         </div>
@@ -75,4 +73,4 @@
   </div>
 
 </div>
-    	
+    

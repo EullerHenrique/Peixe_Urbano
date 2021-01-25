@@ -72,3 +72,4 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 
 import 'intl';
 import 'intl/locale-data/jsonp/pt';
+import 'reflect-metadata'
