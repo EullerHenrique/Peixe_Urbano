@@ -113,6 +113,12 @@
 ![eullerhenrique github io_Peixe_Urbano_ (3)](https://user-images.githubusercontent.com/48317736/105648557-da8b6b80-5e8a-11eb-9e78-726423984558.png)
 
 ---
+
+### Oferta
+
+![eullerhenrique github io_Peixe_Urbano_ (5)](https://user-images.githubusercontent.com/48317736/105665604-2b648980-5eb6-11eb-8af8-ebbc382a0096.png)
+
+---
   
 ### Ordem De Compra  
 
