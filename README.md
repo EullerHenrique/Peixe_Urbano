@@ -4,18 +4,19 @@
  
  <img alt="Framework" src="https://img.shields.io/static/v1?label=Angular&message=framework&color=blue&style=plastic&logo=ANGULAR">
  
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/EullerHenrique/Peixe_Urbano">
+ <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/EullerHenrique/Peixe_Urbano">
   
  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/EullerHenrique/Peixe_Urbano">
   
-<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/EullerHenrique/Peixe_Urbano">
+ <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/EullerHenrique/Peixe_Urbano">
 
-  <a href="https://github.com/EullerHenrique/Peixe_Urbano/commits/master">
+ <a href="https://github.com/EullerHenrique/Peixe_Urbano/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/EullerHenrique/Peixe_Urbano">
-  </a>
+ </a>
   
+ <img alt="Github license" src="https://img.shields.io/github/license/EullerHenrique/Peixe_Urbano">
 
-<img src="http://img.shields.io/static/v1?label=status&message=concluded&color=GREEN&style=plastic"/>
+ <img alt="Github status" src="http://img.shields.io/static/v1?label=status&message=concluded&color=GREEN&style=plastic"/>
  
 </p>
 
