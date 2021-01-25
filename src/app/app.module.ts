@@ -6,7 +6,7 @@ import { ROUTES } from './app.routes';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DescricaoReduzida } from './app.pipe';
 import { CarrinhoService } from './ordem-compra/carrinho.service';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+//import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { TopComponent } from './top/top.component';
@@ -47,7 +47,7 @@ import { OrdemCompraSucessoComponent } from './ordem-compra/ordem-compra-sucesso
   [
     CarrinhoService, //O serviço é disponibilizado globalmente
     { provide: LOCALE_ID, useValue: 'pt-Br'} // Ajuste necessário para o pipe DescricaoReduzida funcionar
-    ,{provide: LocationStrategy, useClass: HashLocationStrategy} //Ajuste necessário para a página continuar funcionando se um refresh for realizado
+    //,{provide: LocationStrategy, useClass: HashLocationStrategy} //Ajuste necessário para a página continuar funcionando se um refresh for realizado (Ajuste útil para o github pages etc...)
   ],
   bootstrap:
   [ 
