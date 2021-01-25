@@ -152,6 +152,10 @@
     
     sudo npm install @angular/cli@1.1.0 
     
+  **4.** Instale o intl
+  
+    sudo npm install intl
+    
     
 # Instalação e inserção do repositório em um projeto angular
 
