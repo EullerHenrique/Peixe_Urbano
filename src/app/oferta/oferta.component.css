@@ -34,9 +34,7 @@ img {
     color: white;
 }
 
-.mark.btn-outline-primary:hover,
-.btn-outline-primary:active,
-.btn-outline-primary:focus{
+.mark.btn-outline-primary:focus{
     background-color: #006acb;
     border-color:#006acb;
     color: white;
