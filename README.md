@@ -14,8 +14,6 @@
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/EullerHenrique/Peixe_Urbano">
  </a>
   
- <img alt="Github license" src="https://img.shields.io/github/license/EullerHenrique/Peixe_Urbano">
-
  <img alt="Github status" src="http://img.shields.io/static/v1?label=status&message=concluded&color=GREEN&style=plastic"/>
  
 </p>
