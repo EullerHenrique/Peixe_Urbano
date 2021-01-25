@@ -178,7 +178,7 @@
     cd nome-projeto
     rm -rf nome-projeto
   
-  **4.** Insira a pasta src presente no diretório Duolingo no diretório nome-do-projeto  
+  **4.** Insira a pasta src presente no diretório Peixe_Urbano no diretório nome-do-projeto  
       
     cd ..
     cd Peixe_Urbano
