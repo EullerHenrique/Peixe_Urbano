@@ -27,7 +27,16 @@ img {
       color: #006acb;
 
 }
+
 .btn-outline-primary:hover{
+    background-color: #006acb;
+    border-color:#006acb;
+    color: white;
+}
+
+.mark.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus{
     background-color: #006acb;
     border-color:#006acb;
     color: white;
