@@ -62,6 +62,8 @@
 ## Projeto Base
 
     Projeto Pássaro Urbano
+    
+- Obs: Em comparação ao projeto base, diversas alterações foram realizadas.
 
 ## Projeto Proveniente Do Curso
 
